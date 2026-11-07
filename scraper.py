@@ -1,128 +1,116 @@
 import requests
+from bs4 import BeautifulSoup
+import pdfplumber
 import json
-from datetime import datetime, timedelta
+import re
+import io
+from datetime import datetime
 
-HEADERS = {
-    "accept": "application/json, text/plain, */*",
-    "content-type": "application/json",
-    "origin": "https://moa-services.com",
-    "referer": "https://moa-services.com/market-directory/market-daily-price-report",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-}
+# যে পেজে PDF-এর লিংকগুলো আছে
+PAGE_URL = "https://dam.gov.bd/pages/static-pages/6922e0d1933eb65569e28b21"
 
-BASE_URL = "https://moa-services.com/agri-service/crop-price-info/reports/price-report/market-daily-price-report"
+# বাংলা সংখ্যা থেকে ইংরেজি সংখ্যায় রূপান্তর
+BN_DIGITS = "০১২৩৪৫৬৭৮৯"
+EN_DIGITS = "0123456789"
 
-# একটি নির্দিষ্ট বাজারের ডেটা আনা
-def fetch_prices(session, date_str, division, district, market):
-    payload = {
-        "division": division, "district": district, "market": market,
-        "price_type": "retail", "date": date_str
-    }
+def bn_to_en(text):
+    return text.translate(str.maketrans(BN_DIGITS, EN_DIGITS))
+
+def get_latest_pdf():
+    headers = {"User-Agent": "Mozilla/5.0"}
     try:
-        res = session.post(BASE_URL, json=payload, headers=HEADERS, timeout=20)
-        if res.status_code == 200 and res.json().get("success"):
-            return res.json().get("data", [])
-    except: pass
-    return []
+        res = requests.get(PAGE_URL, headers=headers, timeout=30)
+        soup = BeautifulSoup(res.text, "html.parser")
+        # প্রথম PDF লিংকটাই সবচেয়ে নতুন (ঢাকা বিভাগ)
+        links = soup.select("table a[href$='.pdf']")
+        if links:
+            return links[0]["href"]
+    except Exception as e:
+        print("PDF লিংক খুঁজতে সমস্যা:", e)
+    return None
 
-# নাম আনার চেষ্টা (অটোমেটিক অনুমান)
-def fetch_names(session):
-    name_map = {}
-    # এই লিংকগুলো সাধারণত সাইটে লুকানো থাকে, আমরা চেষ্টা করে দেখছি
-    possible_urls = [
-        "https://moa-services.com/agri-service/crop-price-info/master/commodities",
-        "https://moa-services.com/agri-service/crop-price-info/master/commodity-list",
-        "https://moa-services.com/agri-service/master/commodities"
-    ]
-    for url in possible_urls:
-        try:
-            res = session.get(url, headers=HEADERS, timeout=10)
-            if res.status_code == 200:
-                data = res.json()
-                if data.get("success") and data.get("data"):
-                    # যদি লিস্ট আকারে থাকে
-                    if isinstance(data["data"], list):
-                        for item in data["data"]:
-                            if "id" in item and "name" in item:
-                                name_map[str(item["id"])] = item["name"]
-                    # যদি ডিকশনারিতে থাকে
-                    elif isinstance(data["data"], dict):
-                        for key, val in data["data"].items():
-                            if isinstance(val, list):
-                                for item in val:
-                                    if "id" in item and "name" in item:
-                                        name_map[str(item["id"])] = item["name"]
-                    if name_map: return name_map
-        except: pass
-    return name_map
+def clean_name(name):
+    # PDF-এর এলোমেলো লেখা ঠিক করার ম্যাপিং
+    replacements = {
+        "প্রনি কেনি": "প্রতি কেজি",
+        "প্রনিটি": "প্রতিটি",
+        "নলটোর": "লিটার",
+        "রসুি": "মসুর",
+        "মুগ -(কমোটো)": "মুগ (মোটা)",
+        "সনরেো (ক োলো)": "সরিষা (কালো)",
+        "সয়োনর্ি": "সয়াবিন",
+        "ক োলো": "কালো",
+        "আমেোিীকৃি": "আমদানীকৃত",
+        "োঁিো": "টমেটো",
+        "পটল": "পটল",
+        "আলু": "আলু",
+        "বেগুন": "বেগুন"
+    }
+    for bad, good in replacements.items():
+        name = name.replace(bad, good)
+    return name.strip()
 
-def get_all_data():
-    session = requests.Session()
-    today = datetime.now()
-    
-    print("নামের লিস্ট খোঁজা হচ্ছে...")
-    names = fetch_names(session)
-    if names: print(f"সফল! {len(names)} টি নাম পাওয়া গেছে।")
-    else: print("নামের লিস্ট পাওয়া যায়নি, শুধু আইডি দেখানো হবে।")
-
-    # বাজার লিস্ট (তুমি চাইলে আরও বাড়াতে পারো)
-    markets = [
-        {"division": "ঢাকা", "district": "ঢাকা", "market": "কাওরান বাজার"},
-        {"division": "ঢাকা", "district": "ঢাকা", "market": "মিরপুর ১ নং বাজার"},
-        {"division": "ঢাকা", "district": "গাজীপুর", "market": "গাজীপুর বাজার"},
-        {"division": "চট্টগ্রাম", "district": "চট্টগ্রাম", "market": "চকবাজার"},
-    ]
-    
-    final_output = []
-    
-    for m in markets:
-        print(f"চেক করা হচ্ছে: {m['market']}")
-        market_data = None
-        found_date = None
-        
-        # ৩ দিনের লজিক (আজ, গতকাল, পরশু)
-        for days in range(3):
-            d_str = (today - timedelta(days=days)).strftime("%Y-%m-%d")
-            items = fetch_prices(session, d_str, m["division"], m["district"], m["market"])
-            if items:
-                market_data = items
-                found_date = d_str
-                break
-        
-        if market_data:
-            clean_items = []
-            for item in market_data:
-                # নাম বের করা (না পেলে আইডি)
-                c_id = str(item.get("commodity_id"))
-                c_name = names.get(c_id, f"পণ্য আইডি: {c_id}")
-                
-                # শুধু দাম থাকলে যোগ করা
-                if item.get("r_lowestPrice") and item.get("r_highestPrice"):
-                    clean_items.append({
-                        "group_id": item.get("com_grp_id"),
-                        "name": c_name,
-                        "retail_min": item.get("r_lowestPrice"),
-                        "retail_max": item.get("r_highestPrice"),
-                        "wholesale_min": item.get("w_lowestPrice"),
-                        "wholesale_max": item.get("w_highestPrice")
-                    })
+def parse_pdf(pdf_url):
+    headers = {"User-Agent": "Mozilla/5.0"}
+    try:
+        res = requests.get(pdf_url, headers=headers, timeout=60)
+        with pdfplumber.open(io.BytesIO(res.content)) as pdf:
+            # আমরা শুধু ২ নাম্বার পেজটা নিচ্ছি, কারণ এখানেই মূল টেবিলটা আছে
+            page = pdf.pages[1] 
+            text = page.extract_text()
             
-            if clean_items:
-                final_output.append({
-                    "location": m,
-                    "date": found_date,
-                    "items": clean_items
-                })
-                print(f" -> সফল! {len(clean_items)} টি পণ্য পাওয়া গেছে ({found_date})।")
-        else:
-            print(f" -> ডেটা পাওয়া যায়নি।")
+        items = []
+        if not text:
+            return items
 
-    return final_output
+        lines = text.split("\n")
+        for line in lines:
+            # যে লাইনে দাম আছে (যেমন: ৬০.০০ - ৭০.০০) এমন লাইন খুঁজছি
+            match = re.search(r"([\d০-৯\.]+)\s*-\s*([\d০-৯\.]+)", line)
+            if match:
+                min_val = match.group(1)
+                max_val = match.group(2)
+                
+                # বাংলা সংখ্যাকে ইংরেজি করছি
+                min_val_en = bn_to_en(min_val)
+                max_val_en = bn_to_en(max_val)
+                
+                # পণ্যের নাম বের করার চেষ্টা (দামের আগের অংশটুকু)
+                name_part = line[:match.start()].strip()
+                # নাম পরিষ্কার করা
+                clean = clean_name(name_part)
+                
+                # যদি নাম খুব ছোট হয় বা খালি থাকে, তবে বাদ দিচ্ছি
+                if len(clean) > 2:
+                    items.append({
+                        "name": clean,
+                        "lowest_price": min_val_en,
+                        "highest_price": max_val_en,
+                        "raw_line": line.strip()
+                    })
+        return items
+    except Exception as e:
+        print("PDF পার্স করতে সমস্যা:", e)
+        return []
 
 if __name__ == "__main__":
-    data = get_all_data()
-    final_json = {"updated_at": datetime.utcnow().isoformat() + "Z", "data": data}
+    print("শুরু হচ্ছে...")
+    pdf_url = get_latest_pdf()
     
-    with open("prices.json", "w", encoding="utf-8") as f:
-        json.dump(final_json, f, ensure_ascii=False, indent=2)
-    print("সব ডেটা prices.json এ সেভ হয়েছে।")
+    if pdf_url:
+        print("সর্বশেষ PDF পাওয়া গেছে:", pdf_url)
+        items = parse_pdf(pdf_url)
+        
+        if items:
+            final_data = {
+                "updated_at": datetime.utcnow().isoformat() + "Z",
+                "source": pdf_url,
+                "items": items
+            }
+            with open("prices.json", "w", encoding="utf-8") as f:
+                json.dump(final_data, f, ensure_ascii=False, indent=2)
+            print(f"সফল! {len(items)} টি পণ্যের দাম পাওয়া গেছে এবং prices.json এ সেভ হয়েছে।")
+        else:
+            print("PDF থেকে কোনো দাম বের করা যায়নি।")
+    else:
+        print("কোনো PDF লিংক পাওয়া যায়নি।")

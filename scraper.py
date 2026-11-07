@@ -27,34 +27,53 @@ def parse_pdf(pdf_url):
     
     items = []
     with pdfplumber.open(io.BytesIO(res.content)) as pdf:
-        # শুধু ২ নাম্বার পেজ (মূল টেবিল)
         if len(pdf.pages) < 2:
             return []
         page = pdf.pages[1]
         
-        # টেক্সট এক্সট্রাক্ট করি
-        text = page.extract_text()
-        if not text:
+        # প্রতিটি শব্দের অবস্থান সহ বের করি
+        words = page.extract_words()
+        if not words:
             return []
         
-        # প্রতিটি লাইন আলাদা করি
-        lines = text.split("\n")
-        for line in lines:
-            # লাইনে দামের প্যাটার্ন (যেমন 60.00 - 70.00) আছে কিনা
-            # এখানে আমরা সংখ্যা এবং ড্যাশ খুঁজছি
-            match = re.search(r"([\d.]+)\s*-\s*([\d.]+)", line)
-            if match:
-                min_price = match.group(1)
-                max_price = match.group(2)
+        # শব্দগুলোকে লাইন অনুযায়ী গ্রুপ করি (top এর পার্থক্য ৫ পিক্সেলের কম)
+        lines = []
+        current_line = []
+        last_top = None
+        for w in sorted(words, key=lambda x: (x['top'], x['x0'])):
+            if last_top is None or abs(w['top'] - last_top) < 5:
+                current_line.append(w)
+            else:
+                if current_line:
+                    lines.append(current_line)
+                current_line = [w]
+            last_top = w['top']
+        if current_line:
+            lines.append(current_line)
+        
+        # প্রতিটি লাইনের শব্দগুলোকে x-অক্ষ অনুযায়ী সাজাই
+        for line_words in lines:
+            line_words = sorted(line_words, key=lambda x: x['x0'])
+            
+            # লাইনের টেক্সট
+            line_text = " ".join(w['text'] for w in line_words)
+            
+            # এই লাইনে দামের প্যাটার্ন আছে কিনা (যেমন 60.00 - 70.00)
+            # আমরা চেক করি লাইনে কমপক্ষে ২টা সংখ্যা আছে কিনা, আর মাঝে ড্যাশ
+            price_match = re.search(r"(\d+\.?\d*)\s*-\s*(\d+\.?\d*)", line_text)
+            
+            if price_match:
+                min_price = price_match.group(1)
+                max_price = price_match.group(2)
                 
-                # দামের আগের অংশটুকু নাম হিসেবে নিচ্ছি
-                name_part = line[:match.start()].strip()
+                # দামের আগের অংশটুকু নাম হিসেবে নিই
+                name_part = line_text[:price_match.start()].strip()
                 
-                # নাম থেকে অপ্রয়োজনীয় শব্দ বাদ দিচ্ছি
-                name = re.sub(r'প্রতি\s*কেজি|প্রনিটি|প্রনি\s*কেনি|নলটোর', '', name_part).strip()
+                # নাম থেকে অপ্রয়োজনীয় শব্দ বাদ দিই
+                name = re.sub(r'প্রতি\s*কেজি|প্রনিটি|প্রনি\s*কেনি|নলটোর|প্রতি\s*লিটার', '', name_part, flags=re.IGNORECASE).strip()
                 
-                # যদি নাম খুব ছোট না হয়
-                if len(name) > 2:
+                # যদি নামে কমপক্ষে ২টা অক্ষর থাকে
+                if len(name) > 2 and not name.isdigit():
                     items.append({
                         "name": name,
                         "min_price": min_price,

@@ -1,23 +1,58 @@
-name: Scrape
-on:
-  schedule:
-    - cron: "17 3 * * *"
-  workflow_dispatch:
-permissions:
-  contents: write
-jobs:
-  scrape:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - run: pip install requests beautifulsoup4 pdfplumber
-      - run: python scraper.py
-      - run: |
-          git config user.name "bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add prices.json
-          git diff --staged --quiet || git commit -m "update"
-          git push
+import requests
+from bs4 import BeautifulSoup
+import json
+import re
+from datetime import datetime
+
+# তোমার দেওয়া ওয়েবসাইটের লিংক
+URL = "https://moa-services.com/market-directory/market-daily-price-report"
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+}
+
+def scrape_prices():
+    # ১. ওয়েবসাইটে রিকোয়েস্ট পাঠানো
+    response = requests.get(URL, headers=headers, timeout=30)
+    soup = BeautifulSoup(response.text, "html.parser")
+    
+    items = []
+    
+    # ২. ওয়েবসাইটের টেবিল খোঁজা (এখানে তোমার স্ক্রিনশটের ডেটাগুলো থাকবে)
+    # আমরা সব টেবিল খুঁজব এবং যেটাতে দাম আছে সেটা নিব
+    tables = soup.find_all("table")
+    
+    for table in tables:
+        rows = table.find_all("tr")
+        for row in rows:
+            cols = row.find_all("td")
+            # যদি সারিতে অন্তত ৪টি কলাম থাকে (গ্রুপ, নাম, একক, দাম)
+            if len(cols) >= 4:
+                product_name = cols[1].text.strip()
+                unit = cols[2].text.strip()
+                price_range = cols[3].text.strip()
+                
+                # দামের টেক্সট থেকে সংখ্যা বের করা (যেমন ৬৮-৯১ থেকে)
+                # আমরা বাংলা সংখ্যাও চেক করব
+                if price_range and product_name:
+                    items.append({
+                        "name": product_name,
+                        "unit": unit,
+                        "price_range": price_range
+                    })
+
+    return {
+        "updated_at": datetime.utcnow().isoformat() + "Z",
+        "items": items
+    }
+
+if __name__ == "__main__":
+    print("ডেটা খোঁজা হচ্ছে...")
+    data = scrape_prices()
+    if len(data["items"]) < 5:
+        print("সতর্কতা: খুব কম ডেটা পাওয়া গেছে। ওয়েবসাইটের স্ট্রাকচার চেক করুন।")
+    
+    with open("prices.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    
+    print(f"সফলভাবে {len(data['items'])} টি পণ্যের দাম পাওয়া গেছে!")

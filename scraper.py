@@ -1,52 +1,61 @@
 import requests
-from bs4 import BeautifulSoup
-import pdfplumber
 import json
-import re
-import io
 from datetime import datetime
 
-PAGE_URL = "https://dam.gov.bd/pages/static-pages/6922e0d1933eb65569e28b21"
-BN = "০১২৩৪৫৬৭৮৯"
-EN = "0123456789"
+def get_prices():
+    url = "https://moa-services.com/agri-service/crop-price-info/reports/price-report/market-daily-price-report"
+    
+    # তোমার দেওয়া হেডারগুলো (যাতে সাইট বুঝতে পারে এটা সত্যিকারের ইউজার)
+    headers = {
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "origin": "https://moa-services.com",
+        "referer": "https://moa-services.com/market-directory/market-daily-price-report",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "accessmenuname": "https://moa-services.com/market-directory/market-daily-price-report",
+        "accessuserid": "0",
+        "accessusername": ""
+    }
 
-def bn_to_en(text):
-    return text.translate(str.maketrans(BN, EN))
+    # ফর্মের ডেটা (Payload)। 
+    # যেহেতু আমরা আইডি জানি না, আমরা নাম দিয়েই পাঠাচ্ছি (যদি সাইট সাপোর্ট করে)
+    # অথবা তোমার স্ক্রিনশটের উপর ভিত্তি করে ডিফল্ট ডেটা
+    payload = {
+        "division": "ঢাকা",       # অথবা division_id: "6aef5622fe5fe1c548e69ea5" (তোমার আগের স্ক্রিনশটে ছিল)
+        "district": "ঢাকা",
+        "market": "কাওরান বাজার",
+        "price_type": "retail",   # খুচরা
+        "date": "2026-11-07"
+    }
 
-def get_latest_pdf():
-    r = requests.get(PAGE_URL, timeout=30)
-    soup = BeautifulSoup(r.text, "html.parser")
-    # সব PDF লিংক খুঁজি
-    links = soup.select("table a[href$='.pdf']")
-    if not links:
-        raise Exception("কোনো PDF লিংক পাওয়া যায়নি")
-    # প্রথম লিংকটাই সবচেয়ে নতুন (ঢাকা)
-    return links[0]["href"]
-
-def parse_pdf(url):
-    r = requests.get(url, timeout=60)
-    with pdfplumber.open(io.BytesIO(r.content)) as pdf:
-        text = "\n".join(p.extract_text() or "" for p in pdf.pages)
-    items = []
-    for line in text.split("\n"):
-        m = re.search(r"([\d.]+)\s*-\s*([\d.]+)", line)
-        if m and len(line) > 10:
-            items.append({
-                "raw": line.strip(),
-                "min": float(m.group(1)),
-                "max": float(m.group(2))
-            })
-    return items
+    print("ডেটা খোঁজা হচ্ছে...")
+    # এখানে POST মেথড ব্যবহার করা হচ্ছে
+    response = requests.post(url, json=payload, headers=headers, timeout=30)
+    
+    print("স্ট্যাটাস কোড:", response.status_code)
+    
+    if response.status_code == 200:
+        data = response.json()
+        # তোমার দেখানো ডেটা স্ট্রাকচার অনুযায়ী
+        if data.get("success"):
+            items = data.get("data", [])
+            print(f"সফল! {len(items)} টি ডেটা পাওয়া গেছে।")
+            return items
+        else:
+            print("API বলছে ডেটা পাওয়া যায়নি (success = false)।")
+    else:
+        print("রিকোয়েস্ট ফেইল করেছে।")
+        print(response.text) # কী ভুল হচ্ছে দেখার জন্য
+        
+    return []
 
 if __name__ == "__main__":
-    pdf_url = get_latest_pdf()
-    print("PDF:", pdf_url)
-    items = parse_pdf(pdf_url)
-    data = {
+    items = get_prices()
+    
+    # ডেটা সেভ করা
+    final_data = {
         "updated_at": datetime.utcnow().isoformat() + "Z",
-        "source": pdf_url,
         "items": items
     }
     with open("prices.json", "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"পাওয়া গেছে {len(items)} টি পণ্য")
+        json.dump(final_data, f, ensure_ascii=False, indent=2)

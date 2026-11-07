@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import json
 import re
 import io
+import os
 from datetime import datetime
 from sohojpath import BanglaPdfParser, ParserConfig
 
@@ -25,8 +26,12 @@ def parse_pdf(pdf_url):
     headers = {"User-Agent": "Mozilla/5.0"}
     res = requests.get(pdf_url, headers=headers, timeout=60, verify=False)
     
+    # PDF ফাইলটা ডিস্কে সেভ করি (sohojpath ফাইলের পাথ চায়)
+    with open("temp.pdf", "wb") as f:
+        f.write(res.content)
+    
     parser = BanglaPdfParser(ParserConfig(language="ben", dpi=300))
-    pages = list(parser.parse(io.BytesIO(res.content), pages=[2]))
+    pages = list(parser.parse("temp.pdf", pages=[2]))
     if not pages:
         return []
     
@@ -84,6 +89,10 @@ if __name__ == "__main__":
     
     print("OCR চলছে, একটু অপেক্ষা করুন...")
     items = parse_pdf(links[0])
+    
+    # temp ফাইলটা মুছে ফেলি
+    if os.path.exists("temp.pdf"):
+        os.remove("temp.pdf")
     
     if items:
         data = {

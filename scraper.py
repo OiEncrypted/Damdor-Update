@@ -7,16 +7,13 @@ import json
 import re
 import io
 import os
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 import pdfplumber
 
 PAGE_URL = "https://dam.gov.bd/pages/static-pages/6922e0d1933eb65569e28b21"
 
 # ==========================================
-# NAME_MAP (সঠিক পুরো নাম)
+# NAME_MAP — সঠিক পুরো নাম
 # ==========================================
 NAME_MAP = {
     "আটো প্যোরেট-সোেো": "আটা (প্যাকেট)",
@@ -59,10 +56,10 @@ NAME_MAP = {
 }
 
 # ==========================================
-# REPLACEMENTS (ভাঙা শব্দ সঠিক করা)
+# REPLACEMENTS — ভাঙা শব্দ ফিক্সিং
 # ==========================================
 REPLACEMENTS = {
-    # ---- একক ----
+    # একক
     "প্রনি কেনি": "", "প্রনিটি": "", "প্রতি কেনি": "",
     "প্রলি কেলি": "প্রতি কেজি", "প্রলি": "প্রতি", "কেলি": "কেজি",
     "নলটোর": "লিটার", "প্রতি লিটার": "লিটার", "১ নলটোর": "১ লিটার",
@@ -72,27 +69,27 @@ REPLACEMENTS = {
     "নর্নিন্ন": "বিভিন্ন", "নর্নভন্ন": "বিভিন্ন",
     "প্রনিহোনি": "৪ পিস", "প্রনি হোনি": "৪ পিস",
 
-    # ---- মাংস ----
+    # মাংস
     "মোাংস": "মাংস", "মোংস": "মাংস",
-    "খোনসর": "খাসি", "খাসি": "খাসি",
+    "খোনসর": "খাসি",
     "ছোগরির": "ছাগলের", "ছোগল": "ছাগল",
     "োগরির": "গরুর", "গরু (হোড়সহ)": "গরু (হাড়সহ)",
     "হোড়সহ": "(হাড়সহ)",
 
-    # ---- মুরগি ----
+    # মুরগি
     "কমোরগ": "মুরগি", "মুরনগ": "মুরগি", "মুিরগ": "মুরগি",
     "মুিগী": "মুরগি", "বমািগ": "মুরগি",
     "কদশী": "দেশি", "কেশী": "দেশি", "কদিী": "দেশি", "কদনশ": "দেশি",
     "বেশী": "দেশি", "েে": "দেশি",
     "কসোিোিী": "সোনালি", "কসোিোলী": "সোনালি",
-    "বসানািী": "সোনালি", "বসাঃ": "সোনালি", "সোনালি": "সোনালি",
+    "বসানািী": "সোনালি", "বসাঃ": "সোনালি",
     "িয়িোর": "ব্রয়লার", "িয়লোর": "ব্রয়লার",
     "েোিোর": "ব্রয়লার", "িোিোর": "ব্রয়লার",
     "িাযোন্ত": "", "িযোন্ত": "", "িযান্ত": "", "িাযান্ত": "",
     "েোিোরর্োড": "ব্রয়লার", "র্োড": "", "বও": "",
     "মুরগি মুরগি": "মুরগি", "মুরগিমুরগি": "মুরগি",
 
-    # ---- ডিম ----
+    # ডিম
     "নডমিঃ": "ডিম", "নডমঃ": "ডিম", "রডমঃ": "ডিম", "নডম": "ডিম",
     "ডিমমুরগি": "ডিম", "ফোম বসোদো": "ফার্ম", "ফোম বসোেো": "ফার্ম",
     "ফোমবসোেো": "ফার্ম", "বসোদো": "ডিম", "বসোেো": "ডিম",
@@ -100,26 +97,26 @@ REPLACEMENTS = {
     "েিো": "ডিম", "সোগর": "হাঁস", "চাঁপো": "চায়না",
     "৪টি": "৪ পিস", "১ পিছ": "১ পিস",
 
-    # ---- মাছ ----
+    # মাছ
     "মোছ": "মাছ", "মো": "মাছ", "মাছ োনর": "মাছ",
-    "মাছঝোনর": "মাঝারি", "মাছ োনর": "মাছ",
+    "মাছঝোনর": "মাঝারি",
     "ইনিশ": "ইলিশ", "ইনিি": "ইলিশ",
     "চোরষর": "দেশি", "চোরের": "দেশি", "চোরির": "দেশি",
     "কিিোনপয়ো": "কাতলা", "কিিোনপেো": "কাতলা",
     "পোাংগোস": "পাঙাশ", "পাংগাস": "পাঙাশ",
     "েোিি": "তেলাপিয়া", "ক োট": "বড়",
 
-    # ---- দুধ ----
+    # দুধ
     "গুুঁরড়ো": "গুঁড়া", "গুকড়া": "গুঁড়া", "গুড়া": "গুঁড়া",
     "গুুঁরড়ো": "গুঁড়া", "দুি": "দুধ",
     "গুঁড়া দুধ গুঁড়া": "গুঁড়া দুধ",
 
-    # ---- ফল ----
+    # ফল
     "আরপি": "আপেল", "আরেল": "আপেল",
     "কপয়োরো": "পেঁয়ারা",
     "িাম্বুরো": "লেবু",
 
-    # ---- চাল ----
+    # চাল
     "চোি": "চাল", "চোি-": "চাল-", "ি র্": "চাল", "ির্ণ": "চাল",
     "পোিোম": "পাটনা",
     "মোঝোনর": "মাঝারি", "মো োনর": "মাঝারি",
@@ -132,29 +129,29 @@ REPLACEMENTS = {
     "কর্োররো": "কারওয়ান", "কর্োর": "কারওয়ান",
     "নহরো": "নাইজার", "নচেি": "দেশি",
     "িোনিরগোল্ড": "গোল্ড", "নোনিরগোল্ড": "গোল্ড",
-    "Non": "", "নচেি": "দেশি",
-    "িপ্রিনিযো নকেে": "ইপ্রিনিয়া কেট",
+    "Non": "", "িপ্রিনিযো নকেে": "ইপ্রিনিয়া কেট",
 
-    # ---- অন্যান্য ----
+    # অন্যান্য
     "রচরন": "মরিচ", "মনরি": "মরিচ",
     "ব ািা": "কাঁচা", "ক োলো": "কালো", "ক োট": "বড়",
     "সাধাির্": "সাধারণ", "উন্নি": "উন্নত",
     "(cid:10)": "", "(cid:XX)": "", "(cid:": "", ")": "",
     "SL 4 H": "SL-4H", "SL4H": "SL-4H",
-    "ফামণ": "ফার্ম", "ফামণ": "ফার্ম",
+    "ফামণ": "ফার্ম",
     "গি মাছরসর": "গরম মসলা",
 }
 
-# যে শব্দগুলো থাকলে নাম "সন্দেহজনক" বলে গণ্য হবে
+# সন্দেহজনক শব্দের মার্কার
 BROKEN_MARKERS = [
     "োনর", "িোি", "েোিোর", "িোিোর", "নচেি", "কমাছটো",
     "িযান্ত", "িযোন্ত", "িাযোন্ত", "ির্ণ", "প্রলি", "কেলি",
     "মাছঝোনর", "গকস", "েোটোর", "িোনিরগোল্ড", "স্টোিীয়",
     "িপ্রিনিযো", "নকেে", "ফামণ", "মাছ োনর", "নিরোশোইি",
-    "নিরোিোইি", "শুেিো", "েোিোর", "িাযোন্ত", "বমািগ",
+    "নিরোিোইি", "শুেিো", "িাযোন্ত", "বমািগ",
     "সোেো", "িাম্বুরো", "কপয়োরো", "পনিপ্যোে", "পনলপ্যোে",
     "প্রনি", "প্রনিটি", "মোছ", "মোাংস", "মোংস",
 ]
+
 
 def is_suspicious(name):
     """নাম সন্দেহজনক কিনা চেক করে"""
@@ -162,21 +159,18 @@ def is_suspicious(name):
         return True
     if len(name) > 60:
         return True
-    # cid বা unusual char
     if re.search(r"\(cid:", name):
         return True
-    # বাংলা, ইংরেজি, স্পেস, ব্র্যাকেট ছাড়া অন্য কিছু থাকলে
     if re.search(r"[^\u0980-\u09FFa-zA-Z0-9\s\(\)\/\-\.,%]", name):
         return True
-    # সংখ্যা বেশি থাকলে (40 00 60 00 এরকম)
     digit_groups = re.findall(r"\d{2,}", name)
     if len(digit_groups) >= 3:
         return True
-    # ভাঙা শব্দ থাকলে
     for marker in BROKEN_MARKERS:
         if marker in name:
             return True
     return False
+
 
 def get_pdf_links():
     headers = {"User-Agent": "Mozilla/5.0"}
@@ -188,6 +182,7 @@ def get_pdf_links():
     except Exception as e:
         print(f"লিংক সমস্যা: {e}")
         return []
+
 
 def clean_name(name):
     name = name.strip()
@@ -202,13 +197,11 @@ def clean_name(name):
     for bad, good in REPLACEMENTS.items():
         name = name.replace(bad, good)
 
-    # সংখ্যা/চিহ্ন বাদ
     name = re.sub(r"^[\d০-৯]+\s+", "", name)
     name = re.sub(r"\s+[\d০-৯]+\s*$", "", name)
     name = re.sub(r"[\_\-\.\,\/]+", " ", name)
     name = re.sub(r"\s+", " ", name).strip()
 
-    # ডুপ্লিকেট শব্দ
     words = name.split()
     final_words = []
     for w in words:
@@ -220,6 +213,7 @@ def clean_name(name):
         return ""
 
     return name
+
 
 def parse_pdf(pdf_url, division_name, suspicious_list):
     headers = {"User-Agent": "Mozilla/5.0"}
@@ -271,7 +265,7 @@ def parse_pdf(pdf_url, division_name, suspicious_list):
                         "raw": raw_name[:150],
                         "cleaned": cleaned
                     })
-                    # তবুও ডেটাতে রাখি, যাতে বাদ না পড়ে
+
                 items.append({
                     "division": division_name,
                     "name": cleaned,
@@ -282,51 +276,68 @@ def parse_pdf(pdf_url, division_name, suspicious_list):
         print(f"PDF সমস্যা ({division_name}): {e}")
     return items
 
-def send_email(suspicious_items, total_count):
-    sender = os.environ.get("EMAIL_USER")
-    password = os.environ.get("EMAIL_PASS")
-    recipient = os.environ.get("EMAIL_TO")
 
-    if not all([sender, password, recipient]):
-        print("⚠️ Email credentials missing — skipping email")
+def create_github_issue(suspicious_items, total_count):
+    """GitHub Issues-এ ইস্যু তৈরি করে — GitHub নিজেই ইমেইলে জানাবে"""
+    token = os.environ.get("GITHUB_TOKEN")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+
+    if not token or not repo:
+        print("⚠️ GITHUB_TOKEN বা GITHUB_REPOSITORY নেই — ইস্যু তৈরি হচ্ছে না")
         return
 
     if not suspicious_items:
-        print("✅ No suspicious names — no email needed")
+        print("✅ সন্দেহজনক নাম নেই — ইস্যু তৈরি হচ্ছে না")
         return
 
-    subject = f"⚠️ {len(suspicious_items)} টি সন্দেহজনক পণ্যের নাম পাওয়া গেছে"
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+    title = f"⚠️ {len(suspicious_items)} টি সন্দেহজনক পণ্যের নাম ({today})"
 
     body_lines = [
-        f"আজকের স্ক্র্যাপে মোট {total_count} টি পণ্য পাওয়া গেছে।",
-        f"এর মধ্যে {len(suspicious_items)} টি নাম সন্দেহজনক (হয়তো ভাঙা বা অসম্পূর্ণ)।",
+        f"আজকের স্ক্র্যাপে **মোট {total_count}** টি পণ্য পাওয়া গেছে।",
+        f"এর মধ্যে **{len(suspicious_items)}** টি নাম সন্দেহজনক।",
         "",
-        "বিস্তারিত:",
-        "-" * 60,
+        "### কী করতে হবে",
+        "নিচের `Raw Text` দেখে সঠিক নাম ঠিক করে `scraper.py`-এর `REPLACEMENTS`-এ যোগ করো।",
+        "",
+        "### বিস্তারিত",
+        "",
+        "| বিভাগ | Raw Text | Cleaned |",
+        "|-------|----------|---------|",
     ]
-    for s in suspicious_items[:100]:  # সর্বোচ্চ ১০০টা
-        body_lines.append(
-            f"[{s['division']}]\n  Raw    : {s['raw']}\n  Cleaned: {s['cleaned']}\n"
-        )
-    if len(suspicious_items) > 100:
-        body_lines.append(f"... এবং আরও {len(suspicious_items) - 100} টি")
 
+    for s in suspicious_items[:200]:
+        raw = s['raw'].replace('|', '\\|')[:100]
+        cleaned = s['cleaned'].replace('|', '\\|')[:80]
+        body_lines.append(f"| {s['division']} | `{raw}` | {cleaned} |")
+
+    if len(suspicious_items) > 200:
+        body_lines.append(f"\n_... এবং আরও {len(suspicious_items) - 200} টি_")
+
+    body_lines.append("\n---\n_এই ইস্যুটি স্বয়ংক্রিয়ভাবে তৈরি হয়েছে।_")
     body = "\n".join(body_lines)
 
+    url = f"https://api.github.com/repos/{repo}/issues"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28"
+    }
+    data = {
+        "title": title,
+        "body": body,
+        "labels": ["suspicious-names", "auto-generated"]
+    }
+
     try:
-        msg = MIMEMultipart()
-        msg["From"] = sender
-        msg["To"] = recipient
-        msg["Subject"] = subject
-        msg.attach(MIMEText(body, "plain", "utf-8"))
-
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as server:
-            server.login(sender, password)
-            server.send_message(msg)
-
-        print(f"✅ Email sent to {recipient} ({len(suspicious_items)} suspicious)")
+        res = requests.post(url, json=data, headers=headers, timeout=30)
+        if res.status_code == 201:
+            print(f"✅ Issue তৈরি হয়েছে: {res.json()['html_url']}")
+        else:
+            print(f"❌ Issue ব্যর্থ: {res.status_code} — {res.text}")
     except Exception as e:
-        print(f"❌ Email failed: {e}")
+        print(f"❌ Issue exception: {e}")
+
 
 if __name__ == "__main__":
     print("=" * 60)
@@ -372,5 +383,5 @@ if __name__ == "__main__":
     print(f"⚠️  সন্দেহজনক নাম: {len(suspicious)} টি")
     print("=" * 60)
 
-    # সন্দেহজনক পণ্য থাকলে ইমেইল পাঠাই
-    send_email(suspicious, len(unique))
+    # সন্দেহজনক নাম থাকলে GitHub Issue তৈরি করি
+    create_github_issue(suspicious, len(unique))

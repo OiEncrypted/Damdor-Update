@@ -1,0 +1,3605 @@
+{
+  "updated_at": "2026-11-07T19:50:59.838124Z",
+  "items": [
+    {
+      "com_grp_id": 26,
+      "commodity_id": 584,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": "5733",
+      "w_highestPrice": "5982"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 585,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "34",
+      "r_highestPrice": "35",
+      "w_lowestPrice": "3537",
+      "w_highestPrice": "3642"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 586,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "31",
+      "r_highestPrice": "32",
+      "w_lowestPrice": "2942",
+      "w_highestPrice": "2998"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 587,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "31",
+      "r_highestPrice": "32",
+      "w_lowestPrice": "2786",
+      "w_highestPrice": "2862"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 588,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": "3245",
+      "w_highestPrice": "55743"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 589,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "28",
+      "r_highestPrice": "29",
+      "w_lowestPrice": "5597",
+      "w_highestPrice": "5799"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 590,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "28",
+      "r_highestPrice": "29",
+      "w_lowestPrice": "2719",
+      "w_highestPrice": "2827"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 591,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": "2800",
+      "w_highestPrice": "3000"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 592,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "33",
+      "r_highestPrice": "35",
+      "w_lowestPrice": "3389",
+      "w_highestPrice": "3517"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 593,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": "3000",
+      "w_highestPrice": "3100"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 594,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "29",
+      "r_highestPrice": "31",
+      "w_lowestPrice": "3283",
+      "w_highestPrice": "3219"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 595,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "40",
+      "r_highestPrice": "42",
+      "w_lowestPrice": "3417",
+      "w_highestPrice": "3605"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 596,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "37",
+      "r_highestPrice": "39",
+      "w_lowestPrice": "3330",
+      "w_highestPrice": "3559"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 597,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "27",
+      "r_highestPrice": "28",
+      "w_lowestPrice": "2722",
+      "w_highestPrice": "2803"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 598,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "28",
+      "r_highestPrice": "28",
+      "w_lowestPrice": "2915",
+      "w_highestPrice": "4253"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 599,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "26",
+      "r_highestPrice": "28",
+      "w_lowestPrice": "2493",
+      "w_highestPrice": "2617"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 600,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": "2870",
+      "w_highestPrice": "2970"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 601,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "68",
+      "r_highestPrice": "71",
+      "w_lowestPrice": "6572",
+      "w_highestPrice": "6863"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 602,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "69",
+      "r_highestPrice": "75",
+      "w_lowestPrice": "6559",
+      "w_highestPrice": "9481"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 603,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "53",
+      "r_highestPrice": "55",
+      "w_lowestPrice": "4976",
+      "w_highestPrice": "5193"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 604,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "48",
+      "r_highestPrice": "50",
+      "w_lowestPrice": "4693",
+      "w_highestPrice": "4727"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 605,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "51",
+      "r_highestPrice": "53",
+      "w_lowestPrice": "4858",
+      "w_highestPrice": "5058"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 606,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 607,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 608,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "67",
+      "r_highestPrice": "83",
+      "w_lowestPrice": "6452",
+      "w_highestPrice": "6952"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 609,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "68",
+      "r_highestPrice": "70",
+      "w_lowestPrice": "6450",
+      "w_highestPrice": "6650"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 610,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "85",
+      "r_highestPrice": "102",
+      "w_lowestPrice": "7983",
+      "w_highestPrice": "9452"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 612,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "56",
+      "r_highestPrice": "60",
+      "w_lowestPrice": "5742",
+      "w_highestPrice": "5694"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 613,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "47",
+      "r_highestPrice": "48",
+      "w_lowestPrice": "4355",
+      "w_highestPrice": "4503"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 614,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "65",
+      "r_highestPrice": "72",
+      "w_lowestPrice": "6200",
+      "w_highestPrice": "6745"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 616,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "57",
+      "r_highestPrice": "59",
+      "w_lowestPrice": "4504",
+      "w_highestPrice": "4675"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 617,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "57",
+      "r_highestPrice": "60",
+      "w_lowestPrice": "5458",
+      "w_highestPrice": "5736"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 618,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "52",
+      "r_highestPrice": "54",
+      "w_lowestPrice": "4898",
+      "w_highestPrice": "5090"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 619,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "46",
+      "r_highestPrice": "47",
+      "w_lowestPrice": "4400",
+      "w_highestPrice": "4560"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 621,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "48",
+      "r_highestPrice": "49",
+      "w_lowestPrice": "4222",
+      "w_highestPrice": "4333"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 622,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "42",
+      "r_highestPrice": "44",
+      "w_lowestPrice": "20413",
+      "w_highestPrice": "3863"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 623,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "40",
+      "r_highestPrice": "41",
+      "w_lowestPrice": "3751",
+      "w_highestPrice": "3900"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 624,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "44",
+      "r_highestPrice": "46",
+      "w_lowestPrice": "4071",
+      "w_highestPrice": "4220"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 626,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "39",
+      "r_highestPrice": "41",
+      "w_lowestPrice": "3875",
+      "w_highestPrice": "3964"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 627,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "42",
+      "r_highestPrice": "43",
+      "w_lowestPrice": "3882",
+      "w_highestPrice": "4048"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 628,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "55",
+      "r_highestPrice": "56",
+      "w_lowestPrice": "4879",
+      "w_highestPrice": "5159"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 629,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "24",
+      "r_highestPrice": "24",
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 630,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "45",
+      "r_highestPrice": "48",
+      "w_lowestPrice": "4167",
+      "w_highestPrice": "4358"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 736,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "57",
+      "r_highestPrice": "60",
+      "w_lowestPrice": "5346",
+      "w_highestPrice": "5571"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 737,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "64",
+      "r_highestPrice": "70",
+      "w_lowestPrice": "7246",
+      "w_highestPrice": "7577"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 738,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "66",
+      "r_highestPrice": "69",
+      "w_lowestPrice": "6200",
+      "w_highestPrice": "6506"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 739,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "32",
+      "r_highestPrice": "34",
+      "w_lowestPrice": "3142",
+      "w_highestPrice": "3114"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 740,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "115",
+      "r_highestPrice": "132",
+      "w_lowestPrice": "11136",
+      "w_highestPrice": "13262"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 741,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "105",
+      "r_highestPrice": "117",
+      "w_lowestPrice": "9269",
+      "w_highestPrice": "10343"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 742,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "91",
+      "r_highestPrice": "96",
+      "w_lowestPrice": "8289",
+      "w_highestPrice": "8816"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 743,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 990,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "75",
+      "r_highestPrice": "100",
+      "w_lowestPrice": "6584",
+      "w_highestPrice": "8881"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 991,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "57",
+      "r_highestPrice": "62",
+      "w_lowestPrice": "5128",
+      "w_highestPrice": "5626"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 1002,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 1004,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "49",
+      "r_highestPrice": "51",
+      "w_lowestPrice": "4650",
+      "w_highestPrice": "4855"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 1015,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "45",
+      "r_highestPrice": "47",
+      "w_lowestPrice": "3543",
+      "w_highestPrice": "3680"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 1016,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "53",
+      "r_highestPrice": "55",
+      "w_lowestPrice": "5003",
+      "w_highestPrice": "5191"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 1017,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "68",
+      "r_highestPrice": "78",
+      "w_lowestPrice": "5221",
+      "w_highestPrice": "5853"
+    },
+    {
+      "com_grp_id": 26,
+      "commodity_id": 2995,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "29",
+      "r_highestPrice": "30",
+      "w_lowestPrice": "3035",
+      "w_highestPrice": "3134"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 788,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "161",
+      "r_highestPrice": "177",
+      "w_lowestPrice": "13422",
+      "w_highestPrice": "14558"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 789,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "123",
+      "r_highestPrice": "628",
+      "w_lowestPrice": "11667",
+      "w_highestPrice": "12138"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 793,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "138",
+      "r_highestPrice": "144",
+      "w_lowestPrice": "12409",
+      "w_highestPrice": "12025"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 794,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "152",
+      "r_highestPrice": "160",
+      "w_lowestPrice": "13860",
+      "w_highestPrice": "14351"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 795,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "137",
+      "r_highestPrice": "147",
+      "w_lowestPrice": "12896",
+      "w_highestPrice": "13759"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 796,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "90",
+      "r_highestPrice": "95",
+      "w_lowestPrice": "8889",
+      "w_highestPrice": "9244"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 797,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "130",
+      "r_highestPrice": "140",
+      "w_lowestPrice": "11519",
+      "w_highestPrice": "12607"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 798,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "102",
+      "r_highestPrice": "107",
+      "w_lowestPrice": "9233",
+      "w_highestPrice": "14465"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 799,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "146",
+      "r_highestPrice": "157",
+      "w_lowestPrice": "13440",
+      "w_highestPrice": "14306"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 800,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "123",
+      "r_highestPrice": "133",
+      "w_lowestPrice": "17196",
+      "w_highestPrice": "12128"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 801,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "107",
+      "r_highestPrice": "102",
+      "w_lowestPrice": "9761",
+      "w_highestPrice": "9453"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 802,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "102",
+      "r_highestPrice": "108",
+      "w_lowestPrice": "11782",
+      "w_highestPrice": "10328"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 803,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "66",
+      "r_highestPrice": "70",
+      "w_lowestPrice": "6527",
+      "w_highestPrice": "8314"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 804,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "112",
+      "r_highestPrice": "119",
+      "w_lowestPrice": "10761",
+      "w_highestPrice": "11365"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 805,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "90",
+      "r_highestPrice": "96",
+      "w_lowestPrice": "8613",
+      "w_highestPrice": "8553"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 806,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "90",
+      "r_highestPrice": "100",
+      "w_lowestPrice": "8000",
+      "w_highestPrice": "9000"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 994,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "127",
+      "r_highestPrice": "135",
+      "w_lowestPrice": "11767",
+      "w_highestPrice": "13267"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 995,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "169",
+      "r_highestPrice": "173",
+      "w_lowestPrice": "11501",
+      "w_highestPrice": "12093"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 2994,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "132",
+      "r_highestPrice": "140",
+      "w_lowestPrice": "12628",
+      "w_highestPrice": "13373"
+    },
+    {
+      "com_grp_id": 28,
+      "commodity_id": 21013,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "117",
+      "r_highestPrice": "130",
+      "w_lowestPrice": "10333",
+      "w_highestPrice": "10833"
+    },
+    {
+      "com_grp_id": 29,
+      "commodity_id": 808,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "88",
+      "r_highestPrice": "94",
+      "w_lowestPrice": "7945",
+      "w_highestPrice": "8295"
+    },
+    {
+      "com_grp_id": 29,
+      "commodity_id": 809,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "89",
+      "r_highestPrice": "92",
+      "w_lowestPrice": "8375",
+      "w_highestPrice": "8750"
+    },
+    {
+      "com_grp_id": 29,
+      "commodity_id": 810,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "85",
+      "r_highestPrice": "89",
+      "w_lowestPrice": "8268",
+      "w_highestPrice": "8673"
+    },
+    {
+      "com_grp_id": 29,
+      "commodity_id": 811,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "132",
+      "r_highestPrice": "140",
+      "w_lowestPrice": "11630",
+      "w_highestPrice": "12606"
+    },
+    {
+      "com_grp_id": 29,
+      "commodity_id": 812,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "153",
+      "r_highestPrice": "156",
+      "w_lowestPrice": "14677",
+      "w_highestPrice": "15063"
+    },
+    {
+      "com_grp_id": 29,
+      "commodity_id": 814,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "213",
+      "r_highestPrice": "228",
+      "w_lowestPrice": "17749",
+      "w_highestPrice": "18418"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 815,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "207",
+      "r_highestPrice": "217",
+      "w_lowestPrice": "19907",
+      "w_highestPrice": "20806"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 816,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "200",
+      "r_highestPrice": "211",
+      "w_lowestPrice": "18113",
+      "w_highestPrice": "19220"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 818,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "167",
+      "r_highestPrice": "169",
+      "w_lowestPrice": "17135",
+      "w_highestPrice": "16321"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 822,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "143",
+      "r_highestPrice": "145",
+      "w_lowestPrice": "13518",
+      "w_highestPrice": "13878"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 823,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "286",
+      "r_highestPrice": "177",
+      "w_lowestPrice": "16309",
+      "w_highestPrice": "16615"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 824,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "162",
+      "r_highestPrice": "166",
+      "w_lowestPrice": "15095",
+      "w_highestPrice": "15267"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 825,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "331",
+      "r_highestPrice": "355",
+      "w_lowestPrice": "31842",
+      "w_highestPrice": "34316"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 826,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "354",
+      "r_highestPrice": "370",
+      "w_lowestPrice": "32247",
+      "w_highestPrice": "34200"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 827,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "374",
+      "r_highestPrice": "412",
+      "w_lowestPrice": "31687",
+      "w_highestPrice": "34491"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 1005,
+      "unit_retail": 13,
+      "unit_wholesale": 13,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 21008,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "189",
+      "r_highestPrice": "192",
+      "w_lowestPrice": "18395",
+      "w_highestPrice": "18612"
+    },
+    {
+      "com_grp_id": 30,
+      "commodity_id": 21009,
+      "unit_retail": 20,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "948",
+      "r_highestPrice": "957",
+      "w_lowestPrice": "14140",
+      "w_highestPrice": "14222"
+    },
+    {
+      "com_grp_id": 31,
+      "commodity_id": 828,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "77",
+      "r_highestPrice": "51",
+      "w_lowestPrice": "4332",
+      "w_highestPrice": "4540"
+    },
+    {
+      "com_grp_id": 31,
+      "commodity_id": 829,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "46",
+      "r_highestPrice": "48",
+      "w_lowestPrice": "4200",
+      "w_highestPrice": "4363"
+    },
+    {
+      "com_grp_id": 31,
+      "commodity_id": 830,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 631,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "10",
+      "r_highestPrice": "12",
+      "w_lowestPrice": "816",
+      "w_highestPrice": "869"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 632,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "16",
+      "r_highestPrice": "17",
+      "w_lowestPrice": "1360",
+      "w_highestPrice": "1422"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 633,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "7",
+      "r_highestPrice": "8",
+      "w_lowestPrice": "494",
+      "w_highestPrice": "540"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 634,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "3",
+      "r_highestPrice": "3",
+      "w_lowestPrice": "200",
+      "w_highestPrice": "250"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 635,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "4",
+      "r_highestPrice": "5",
+      "w_lowestPrice": "245",
+      "w_highestPrice": "255"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 636,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "30",
+      "r_highestPrice": "32",
+      "w_lowestPrice": "639",
+      "w_highestPrice": "701"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 637,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "4",
+      "r_highestPrice": "5",
+      "w_lowestPrice": "325",
+      "w_highestPrice": "355"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 638,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "36",
+      "r_highestPrice": "39",
+      "w_lowestPrice": "124",
+      "w_highestPrice": "125"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 639,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "326",
+      "r_highestPrice": "343",
+      "w_lowestPrice": "28727",
+      "w_highestPrice": "30602"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 640,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "388",
+      "r_highestPrice": "407",
+      "w_lowestPrice": "35264",
+      "w_highestPrice": "36342"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 641,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "450",
+      "r_highestPrice": "460",
+      "w_lowestPrice": "42000",
+      "w_highestPrice": "43000"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 643,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "401",
+      "r_highestPrice": "458",
+      "w_lowestPrice": "35935",
+      "w_highestPrice": "39638"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 644,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "225",
+      "r_highestPrice": "372",
+      "w_lowestPrice": "15961",
+      "w_highestPrice": "20167"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 645,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "245",
+      "r_highestPrice": "262",
+      "w_lowestPrice": "21644",
+      "w_highestPrice": "23165"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 646,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "116",
+      "r_highestPrice": "130",
+      "w_lowestPrice": "10200",
+      "w_highestPrice": "12000"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 647,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "210",
+      "r_highestPrice": "227",
+      "w_lowestPrice": "17439",
+      "w_highestPrice": "19524"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 648,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "225",
+      "r_highestPrice": "245",
+      "w_lowestPrice": "19897",
+      "w_highestPrice": "21537"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 744,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "298",
+      "r_highestPrice": "308",
+      "w_lowestPrice": "27172",
+      "w_highestPrice": "28212"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 745,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "222",
+      "r_highestPrice": "267",
+      "w_lowestPrice": "19583",
+      "w_highestPrice": "23167"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 747,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "303",
+      "r_highestPrice": "440",
+      "w_lowestPrice": "36000",
+      "w_highestPrice": "40667"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 748,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "388",
+      "r_highestPrice": "402",
+      "w_lowestPrice": "35710",
+      "w_highestPrice": "36727"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 749,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "300",
+      "r_highestPrice": "324",
+      "w_lowestPrice": "25382",
+      "w_highestPrice": "27686"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 780,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "145",
+      "r_highestPrice": "156",
+      "w_lowestPrice": "11301",
+      "w_highestPrice": "12493"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 781,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "174",
+      "r_highestPrice": "192",
+      "w_lowestPrice": "17979",
+      "w_highestPrice": "15321"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 831,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "63",
+      "r_highestPrice": "79",
+      "w_lowestPrice": "5718",
+      "w_highestPrice": "6771"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 832,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "74",
+      "r_highestPrice": "79",
+      "w_lowestPrice": "7508",
+      "w_highestPrice": "7135"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 833,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "66",
+      "r_highestPrice": "71",
+      "w_lowestPrice": "5351",
+      "w_highestPrice": "5740"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 834,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "137",
+      "r_highestPrice": "154",
+      "w_lowestPrice": "11447",
+      "w_highestPrice": "13416"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 836,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "194",
+      "r_highestPrice": "207",
+      "w_lowestPrice": "17747",
+      "w_highestPrice": "18539"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 837,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "112",
+      "r_highestPrice": "109",
+      "w_lowestPrice": "7926",
+      "w_highestPrice": "9204"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 838,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "160",
+      "r_highestPrice": "175",
+      "w_lowestPrice": "14097",
+      "w_highestPrice": "20142"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 839,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "156",
+      "r_highestPrice": "172",
+      "w_lowestPrice": "13539",
+      "w_highestPrice": "14934"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 840,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "188",
+      "r_highestPrice": "185",
+      "w_lowestPrice": "14285",
+      "w_highestPrice": "15693"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 841,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "33",
+      "r_highestPrice": "35",
+      "w_lowestPrice": "2816",
+      "w_highestPrice": "3002"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 842,
+      "unit_retail": 10,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "35",
+      "r_highestPrice": "40",
+      "w_lowestPrice": "2871",
+      "w_highestPrice": "3272"
+    },
+    {
+      "com_grp_id": 32,
+      "commodity_id": 1006,
+      "unit_retail": 1,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "375",
+      "r_highestPrice": "394",
+      "w_lowestPrice": "34078",
+      "w_highestPrice": "36042"
+    },
+    {
+      "com_grp_id": 33,
+      "commodity_id": 649,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "362",
+      "r_highestPrice": "431",
+      "w_lowestPrice": "34476",
+      "w_highestPrice": "35643"
+    },
+    {
+      "com_grp_id": 33,
+      "commodity_id": 852,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "66",
+      "r_highestPrice": "76",
+      "w_lowestPrice": "6086",
+      "w_highestPrice": "7074"
+    },
+    {
+      "com_grp_id": 33,
+      "commodity_id": 853,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": "6481",
+      "w_highestPrice": "7016"
+    },
+    {
+      "com_grp_id": 33,
+      "commodity_id": 856,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": "6193",
+      "w_highestPrice": "6991"
+    },
+    {
+      "com_grp_id": 33,
+      "commodity_id": 2996,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "45",
+      "r_highestPrice": "54",
+      "w_lowestPrice": "7058",
+      "w_highestPrice": "7662"
+    },
+    {
+      "com_grp_id": 33,
+      "commodity_id": 2997,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "50",
+      "r_highestPrice": "54",
+      "w_lowestPrice": "4582",
+      "w_highestPrice": "5145"
+    },
+    {
+      "com_grp_id": 34,
+      "commodity_id": 652,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 34,
+      "commodity_id": 653,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 34,
+      "commodity_id": 654,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 34,
+      "commodity_id": 655,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "110",
+      "r_highestPrice": "120",
+      "w_lowestPrice": "8500",
+      "w_highestPrice": "9500"
+    },
+    {
+      "com_grp_id": 34,
+      "commodity_id": 656,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 34,
+      "commodity_id": 657,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "210",
+      "r_highestPrice": "220",
+      "w_lowestPrice": "17000",
+      "w_highestPrice": "18500"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 658,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "491",
+      "r_highestPrice": "613",
+      "w_lowestPrice": "46976",
+      "w_highestPrice": "58984"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 659,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "820",
+      "r_highestPrice": "1003",
+      "w_lowestPrice": "86704",
+      "w_highestPrice": "98241"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 660,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "345",
+      "r_highestPrice": "316",
+      "w_lowestPrice": "33061",
+      "w_highestPrice": "38030"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 661,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "770",
+      "r_highestPrice": "920",
+      "w_lowestPrice": "68200",
+      "w_highestPrice": "82900"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 662,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "279",
+      "r_highestPrice": "429",
+      "w_lowestPrice": "32510",
+      "w_highestPrice": "46467"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 769,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "396",
+      "r_highestPrice": "440",
+      "w_lowestPrice": "16000",
+      "w_highestPrice": "18000"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 770,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "605",
+      "r_highestPrice": "787",
+      "w_lowestPrice": "77356",
+      "w_highestPrice": "89195"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 774,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "13",
+      "r_highestPrice": "27",
+      "w_lowestPrice": "1395",
+      "w_highestPrice": "2775"
+    },
+    {
+      "com_grp_id": 35,
+      "commodity_id": 775,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "37",
+      "r_highestPrice": "97",
+      "w_lowestPrice": "2184",
+      "w_highestPrice": "6882"
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 663,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "430",
+      "r_highestPrice": "450",
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 664,
+      "unit_retail": 3,
+      "unit_wholesale": 13,
+      "r_lowestPrice": "69",
+      "r_highestPrice": "76",
+      "w_lowestPrice": "6067",
+      "w_highestPrice": "6487"
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 666,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "2160",
+      "r_highestPrice": "2240",
+      "w_lowestPrice": "115000",
+      "w_highestPrice": "120000"
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 667,
+      "unit_retail": 11,
+      "unit_wholesale": 12,
+      "r_lowestPrice": "1513",
+      "r_highestPrice": "1564",
+      "w_lowestPrice": "9202",
+      "w_highestPrice": "6795"
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 668,
+      "unit_retail": 11,
+      "unit_wholesale": 12,
+      "r_lowestPrice": "1516",
+      "r_highestPrice": "1581",
+      "w_lowestPrice": "9504",
+      "w_highestPrice": "5529"
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 669,
+      "unit_retail": 11,
+      "unit_wholesale": 12,
+      "r_lowestPrice": "16000",
+      "r_highestPrice": "1620",
+      "w_lowestPrice": "9650",
+      "w_highestPrice": "10000"
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 670,
+      "unit_retail": 4,
+      "unit_wholesale": 6,
+      "r_lowestPrice": "96",
+      "r_highestPrice": "98",
+      "w_lowestPrice": "4604",
+      "w_highestPrice": "4637"
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 671,
+      "unit_retail": 4,
+      "unit_wholesale": 6,
+      "r_lowestPrice": "72",
+      "r_highestPrice": "76",
+      "w_lowestPrice": "3114",
+      "w_highestPrice": "3129"
+    },
+    {
+      "com_grp_id": 36,
+      "commodity_id": 672,
+      "unit_retail": 4,
+      "unit_wholesale": 6,
+      "r_lowestPrice": "91",
+      "r_highestPrice": "94",
+      "w_lowestPrice": "4129",
+      "w_highestPrice": "4195"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 673,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "482",
+      "r_highestPrice": "486",
+      "w_lowestPrice": "42727",
+      "w_highestPrice": "44235"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 674,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "511",
+      "r_highestPrice": "537",
+      "w_lowestPrice": "41797",
+      "w_highestPrice": "46711"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 675,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "472",
+      "r_highestPrice": "487",
+      "w_lowestPrice": "44202",
+      "w_highestPrice": "44916"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 676,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "200",
+      "r_highestPrice": "204",
+      "w_lowestPrice": "18039",
+      "w_highestPrice": "18011"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 731,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "442",
+      "r_highestPrice": "478",
+      "w_lowestPrice": "40652",
+      "w_highestPrice": "43826"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 732,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "364",
+      "r_highestPrice": "395",
+      "w_lowestPrice": "39545",
+      "w_highestPrice": "42545"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 734,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "494",
+      "r_highestPrice": "523",
+      "w_lowestPrice": "45970",
+      "w_highestPrice": "48540"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 2998,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "172",
+      "r_highestPrice": "179",
+      "w_lowestPrice": "15672",
+      "w_highestPrice": "16403"
+    },
+    {
+      "com_grp_id": 37,
+      "commodity_id": 2999,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "281",
+      "r_highestPrice": "300",
+      "w_lowestPrice": "26686",
+      "w_highestPrice": "27161"
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 677,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "689",
+      "r_highestPrice": "714",
+      "w_lowestPrice": "64077",
+      "w_highestPrice": "65468"
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 678,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "580",
+      "r_highestPrice": "600",
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 679,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "656",
+      "r_highestPrice": "706",
+      "w_lowestPrice": "64500",
+      "w_highestPrice": "68250"
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 680,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "475",
+      "r_highestPrice": "492",
+      "w_lowestPrice": "43069",
+      "w_highestPrice": "47201"
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 875,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "943",
+      "r_highestPrice": "995",
+      "w_lowestPrice": "88503",
+      "w_highestPrice": "88165"
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 876,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "842",
+      "r_highestPrice": "879",
+      "w_lowestPrice": "63068",
+      "w_highestPrice": "76732"
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 1007,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "951",
+      "r_highestPrice": "1100",
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 1009,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "493",
+      "r_highestPrice": "507",
+      "w_lowestPrice": "45573",
+      "w_highestPrice": "46508"
+    },
+    {
+      "com_grp_id": 38,
+      "commodity_id": 1010,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "219",
+      "r_highestPrice": "228",
+      "w_lowestPrice": "17774",
+      "w_highestPrice": "18319"
+    },
+    {
+      "com_grp_id": 39,
+      "commodity_id": 681,
+      "unit_retail": 5,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "66",
+      "r_highestPrice": "70",
+      "w_lowestPrice": "1477",
+      "w_highestPrice": "1544"
+    },
+    {
+      "com_grp_id": 39,
+      "commodity_id": 682,
+      "unit_retail": 5,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "43",
+      "r_highestPrice": "44",
+      "w_lowestPrice": "1046",
+      "w_highestPrice": "1017"
+    },
+    {
+      "com_grp_id": 39,
+      "commodity_id": 683,
+      "unit_retail": 5,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "43",
+      "r_highestPrice": "43",
+      "w_lowestPrice": "981",
+      "w_highestPrice": "1003"
+    },
+    {
+      "com_grp_id": 39,
+      "commodity_id": 992,
+      "unit_retail": 5,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "65",
+      "r_highestPrice": "68",
+      "w_lowestPrice": "1455",
+      "w_highestPrice": "1675"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 684,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "1400",
+      "r_highestPrice": "1800",
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 686,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "580",
+      "r_highestPrice": "673",
+      "w_lowestPrice": "56500",
+      "w_highestPrice": "64722"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 687,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "591",
+      "r_highestPrice": "691",
+      "w_lowestPrice": "53818",
+      "w_highestPrice": "63545"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 688,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "587",
+      "r_highestPrice": "973",
+      "w_lowestPrice": "43182",
+      "w_highestPrice": "85909"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 689,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "655",
+      "r_highestPrice": "782",
+      "w_lowestPrice": "59091",
+      "w_highestPrice": "67727"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 877,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "469",
+      "r_highestPrice": "520",
+      "w_lowestPrice": "33000",
+      "w_highestPrice": "38530"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 878,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "408",
+      "r_highestPrice": "468",
+      "w_lowestPrice": "36711",
+      "w_highestPrice": "42168"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 879,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "300",
+      "r_highestPrice": "346",
+      "w_lowestPrice": "26779",
+      "w_highestPrice": "30961"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 880,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "348",
+      "r_highestPrice": "384",
+      "w_lowestPrice": "30962",
+      "w_highestPrice": "34453"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 881,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "311",
+      "r_highestPrice": "332",
+      "w_lowestPrice": "27953",
+      "w_highestPrice": "29747"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 882,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "500",
+      "r_highestPrice": "550",
+      "w_lowestPrice": "45000",
+      "w_highestPrice": "50000"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 883,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "398",
+      "r_highestPrice": "450",
+      "w_lowestPrice": "35889",
+      "w_highestPrice": "39778"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 884,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "343",
+      "r_highestPrice": "411",
+      "w_lowestPrice": "28898",
+      "w_highestPrice": "35113"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 885,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "280",
+      "r_highestPrice": "320",
+      "w_lowestPrice": "24372",
+      "w_highestPrice": "27838"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 888,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "302",
+      "r_highestPrice": "344",
+      "w_lowestPrice": "26758",
+      "w_highestPrice": "30652"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 889,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "209",
+      "r_highestPrice": "249",
+      "w_lowestPrice": "18046",
+      "w_highestPrice": "21542"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 890,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "800",
+      "r_highestPrice": "1000",
+      "w_lowestPrice": "75000",
+      "w_highestPrice": "95000"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 891,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "547",
+      "r_highestPrice": "695",
+      "w_lowestPrice": "50444",
+      "w_highestPrice": "65000"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 892,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "1000",
+      "r_highestPrice": "1300",
+      "w_lowestPrice": "90000",
+      "w_highestPrice": "120000"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 893,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "729",
+      "r_highestPrice": "822",
+      "w_lowestPrice": "64211",
+      "w_highestPrice": "73509"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 894,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "700",
+      "r_highestPrice": "800",
+      "w_lowestPrice": "65000",
+      "w_highestPrice": "75000"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 895,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "400",
+      "r_highestPrice": "450",
+      "w_lowestPrice": "35000",
+      "w_highestPrice": "40000"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 896,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "188",
+      "r_highestPrice": "209",
+      "w_lowestPrice": "15284",
+      "w_highestPrice": "17814"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 897,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "157",
+      "r_highestPrice": "179",
+      "w_lowestPrice": "13572",
+      "w_highestPrice": "15463"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 898,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "694",
+      "r_highestPrice": "1778",
+      "w_lowestPrice": "58293",
+      "w_highestPrice": "140265"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 899,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "646",
+      "r_highestPrice": "721",
+      "w_lowestPrice": "58914",
+      "w_highestPrice": "66514"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 900,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "783",
+      "r_highestPrice": "1042",
+      "w_lowestPrice": "64037",
+      "w_highestPrice": "89112"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 901,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "538",
+      "r_highestPrice": "615",
+      "w_lowestPrice": "46053",
+      "w_highestPrice": "50632"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 902,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "252",
+      "r_highestPrice": "299",
+      "w_lowestPrice": "21831",
+      "w_highestPrice": "26119"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 903,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "488",
+      "r_highestPrice": "529",
+      "w_lowestPrice": "43271",
+      "w_highestPrice": "47950"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 904,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "339",
+      "r_highestPrice": "433",
+      "w_lowestPrice": "29759",
+      "w_highestPrice": "42074"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 905,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "173",
+      "r_highestPrice": "222",
+      "w_lowestPrice": "14362",
+      "w_highestPrice": "18996"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 906,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "221",
+      "r_highestPrice": "277",
+      "w_lowestPrice": "18003",
+      "w_highestPrice": "23284"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 907,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "173",
+      "r_highestPrice": "230",
+      "w_lowestPrice": "14689",
+      "w_highestPrice": "19087"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 908,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "600",
+      "r_highestPrice": "800",
+      "w_lowestPrice": "50000",
+      "w_highestPrice": "70000"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 909,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "434",
+      "r_highestPrice": "487",
+      "w_lowestPrice": "38684",
+      "w_highestPrice": "43684"
+    },
+    {
+      "com_grp_id": 40,
+      "commodity_id": 910,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "275",
+      "r_highestPrice": "335",
+      "w_lowestPrice": "24500",
+      "w_highestPrice": "28667"
+    },
+    {
+      "com_grp_id": 41,
+      "commodity_id": 690,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "391",
+      "r_highestPrice": "437",
+      "w_lowestPrice": "35620",
+      "w_highestPrice": "38274"
+    },
+    {
+      "com_grp_id": 41,
+      "commodity_id": 691,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "398",
+      "r_highestPrice": "440",
+      "w_lowestPrice": "35257",
+      "w_highestPrice": "38238"
+    },
+    {
+      "com_grp_id": 41,
+      "commodity_id": 912,
+      "unit_retail": 17,
+      "unit_wholesale": 16,
+      "r_lowestPrice": "137",
+      "r_highestPrice": "159",
+      "w_lowestPrice": "10035",
+      "w_highestPrice": "11680"
+    },
+    {
+      "com_grp_id": 41,
+      "commodity_id": 913,
+      "unit_retail": 17,
+      "unit_wholesale": 16,
+      "r_lowestPrice": "86",
+      "r_highestPrice": "103",
+      "w_lowestPrice": "5732",
+      "w_highestPrice": "6973"
+    },
+    {
+      "com_grp_id": 41,
+      "commodity_id": 914,
+      "unit_retail": 17,
+      "unit_wholesale": 16,
+      "r_lowestPrice": "42",
+      "r_highestPrice": "54",
+      "w_lowestPrice": "2521",
+      "w_highestPrice": "3147"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 692,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "95",
+      "r_highestPrice": "113",
+      "w_lowestPrice": "7215",
+      "w_highestPrice": "8855"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 693,
+      "unit_retail": 2,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "77",
+      "r_highestPrice": "95",
+      "w_lowestPrice": "4178",
+      "w_highestPrice": "8382"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 694,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "28",
+      "r_highestPrice": "33",
+      "w_lowestPrice": "2163",
+      "w_highestPrice": "2365"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 695,
+      "unit_retail": 5,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "128",
+      "r_highestPrice": "159",
+      "w_lowestPrice": "4922",
+      "w_highestPrice": "6160"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 696,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "251",
+      "r_highestPrice": "309",
+      "w_lowestPrice": "22449",
+      "w_highestPrice": "27179"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 697,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "250",
+      "r_highestPrice": "270",
+      "w_lowestPrice": "18000",
+      "w_highestPrice": "20000"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 699,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "66",
+      "r_highestPrice": "99",
+      "w_lowestPrice": "4252",
+      "w_highestPrice": "7373"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 700,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "99",
+      "r_highestPrice": "164",
+      "w_lowestPrice": "5546",
+      "w_highestPrice": "18018"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 701,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "48",
+      "r_highestPrice": "158",
+      "w_lowestPrice": "3813",
+      "w_highestPrice": "12563"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 702,
+      "unit_retail": 8,
+      "unit_wholesale": 9,
+      "r_lowestPrice": "344",
+      "r_highestPrice": "428",
+      "w_lowestPrice": "11523",
+      "w_highestPrice": "14740"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 703,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "100",
+      "r_highestPrice": "128",
+      "w_lowestPrice": "8192",
+      "w_highestPrice": "10797"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 704,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "425",
+      "r_highestPrice": "500",
+      "w_lowestPrice": "37500",
+      "w_highestPrice": "45000"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 705,
+      "unit_retail": 2,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "243",
+      "r_highestPrice": "284",
+      "w_lowestPrice": "21221",
+      "w_highestPrice": "24668"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 706,
+      "unit_retail": 2,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "244",
+      "r_highestPrice": "283",
+      "w_lowestPrice": "21987",
+      "w_highestPrice": "25359"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 707,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "54",
+      "r_highestPrice": "64",
+      "w_lowestPrice": "3966",
+      "w_highestPrice": "4923"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 709,
+      "unit_retail": 8,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "340",
+      "r_highestPrice": "350",
+      "w_lowestPrice": "280",
+      "w_highestPrice": "290"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 916,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "49",
+      "r_highestPrice": "63",
+      "w_lowestPrice": "3334",
+      "w_highestPrice": "4552"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 917,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "67",
+      "r_highestPrice": "81",
+      "w_lowestPrice": "5075",
+      "w_highestPrice": "6145"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 918,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "79",
+      "r_highestPrice": "92",
+      "w_lowestPrice": "6005",
+      "w_highestPrice": "7081"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 919,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "78",
+      "r_highestPrice": "91",
+      "w_lowestPrice": "5925",
+      "w_highestPrice": "7107"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 920,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "79",
+      "r_highestPrice": "97",
+      "w_lowestPrice": "5798",
+      "w_highestPrice": "7121"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 921,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "76",
+      "r_highestPrice": "89",
+      "w_lowestPrice": "6109",
+      "w_highestPrice": "7181"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 922,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "78",
+      "r_highestPrice": "124",
+      "w_lowestPrice": "6013",
+      "w_highestPrice": "7275"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 923,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "158",
+      "r_highestPrice": "237",
+      "w_lowestPrice": "11374",
+      "w_highestPrice": "16661"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 924,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "81",
+      "r_highestPrice": "124",
+      "w_lowestPrice": "5461",
+      "w_highestPrice": "8484"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 925,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "32",
+      "r_highestPrice": "46",
+      "w_lowestPrice": "2170",
+      "w_highestPrice": "3325"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 926,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "5",
+      "r_highestPrice": "7",
+      "w_lowestPrice": "241",
+      "w_highestPrice": "316"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 927,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "7",
+      "r_highestPrice": "9",
+      "w_lowestPrice": "287",
+      "w_highestPrice": "348"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 928,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "121",
+      "r_highestPrice": "141",
+      "w_lowestPrice": "9549",
+      "w_highestPrice": "11228"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 929,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "71",
+      "r_highestPrice": "97",
+      "w_lowestPrice": "5504",
+      "w_highestPrice": "7622"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 930,
+      "unit_retail": 5,
+      "unit_wholesale": 7,
+      "r_lowestPrice": "17",
+      "r_highestPrice": "26",
+      "w_lowestPrice": "299",
+      "w_highestPrice": "369"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 931,
+      "unit_retail": 5,
+      "unit_wholesale": 7,
+      "r_lowestPrice": "32",
+      "r_highestPrice": "39",
+      "w_lowestPrice": "518",
+      "w_highestPrice": "607"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 932,
+      "unit_retail": 5,
+      "unit_wholesale": 7,
+      "r_lowestPrice": "26",
+      "r_highestPrice": "31",
+      "w_lowestPrice": "419",
+      "w_highestPrice": "751"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 933,
+      "unit_retail": 5,
+      "unit_wholesale": 7,
+      "r_lowestPrice": "21",
+      "r_highestPrice": "27",
+      "w_lowestPrice": "329",
+      "w_highestPrice": "404"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 934,
+      "unit_retail": 5,
+      "unit_wholesale": 7,
+      "r_lowestPrice": "21",
+      "r_highestPrice": "26",
+      "w_lowestPrice": "288",
+      "w_highestPrice": "352"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 935,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "55",
+      "r_highestPrice": "72",
+      "w_lowestPrice": "4146",
+      "w_highestPrice": "5534"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 936,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "31",
+      "r_highestPrice": "49",
+      "w_lowestPrice": "2094",
+      "w_highestPrice": "3389"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 937,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "51",
+      "r_highestPrice": "65",
+      "w_lowestPrice": "2788",
+      "w_highestPrice": "3931"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 938,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "213",
+      "r_highestPrice": "283",
+      "w_lowestPrice": "18222",
+      "w_highestPrice": "24222"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 939,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "237",
+      "r_highestPrice": "1263",
+      "w_lowestPrice": "19637",
+      "w_highestPrice": "114762"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 940,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "164",
+      "r_highestPrice": "182",
+      "w_lowestPrice": "14417",
+      "w_highestPrice": "15987"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 941,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": null,
+      "w_highestPrice": null
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 1014,
+      "unit_retail": 2,
+      "unit_wholesale": 2,
+      "r_lowestPrice": null,
+      "r_highestPrice": null,
+      "w_lowestPrice": "1238",
+      "w_highestPrice": "3550"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 21000,
+      "unit_retail": 2,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "394",
+      "r_highestPrice": "448",
+      "w_lowestPrice": "27135",
+      "w_highestPrice": "29995"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 21001,
+      "unit_retail": 2,
+      "unit_wholesale": 2,
+      "r_lowestPrice": "217",
+      "r_highestPrice": "307",
+      "w_lowestPrice": "7513",
+      "w_highestPrice": "9438"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 21002,
+      "unit_retail": 4,
+      "unit_wholesale": 9,
+      "r_lowestPrice": "6",
+      "r_highestPrice": "9",
+      "w_lowestPrice": "4625",
+      "w_highestPrice": "7042"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 21004,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "50",
+      "r_highestPrice": "60",
+      "w_lowestPrice": "4250",
+      "w_highestPrice": "4750"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 21005,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "175",
+      "r_highestPrice": "220",
+      "w_lowestPrice": "14609",
+      "w_highestPrice": "18964"
+    },
+    {
+      "com_grp_id": 42,
+      "commodity_id": 21006,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "25",
+      "r_highestPrice": "30",
+      "w_lowestPrice": "1500",
+      "w_highestPrice": "2000"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 942,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "42",
+      "r_highestPrice": "45",
+      "w_lowestPrice": "5631",
+      "w_highestPrice": "3969"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 943,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "30",
+      "r_highestPrice": "33",
+      "w_lowestPrice": "2550",
+      "w_highestPrice": "2777"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 944,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "33",
+      "r_highestPrice": "35",
+      "w_lowestPrice": "2850",
+      "w_highestPrice": "3044"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 945,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "30",
+      "r_highestPrice": "32",
+      "w_lowestPrice": "2684",
+      "w_highestPrice": "2702"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 946,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "37",
+      "r_highestPrice": "41",
+      "w_lowestPrice": "3311",
+      "w_highestPrice": "3562"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 947,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "279",
+      "r_highestPrice": "30",
+      "w_lowestPrice": "2391",
+      "w_highestPrice": "2544"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 948,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "29",
+      "r_highestPrice": "34",
+      "w_lowestPrice": "2232",
+      "w_highestPrice": "2634"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 949,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "49",
+      "r_highestPrice": "57",
+      "w_lowestPrice": "4033",
+      "w_highestPrice": "4725"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 950,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "108",
+      "r_highestPrice": "48",
+      "w_lowestPrice": "3292",
+      "w_highestPrice": "3911"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 951,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "42",
+      "r_highestPrice": "48",
+      "w_lowestPrice": "3320",
+      "w_highestPrice": "3873"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 952,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "31",
+      "r_highestPrice": "38",
+      "w_lowestPrice": "2258",
+      "w_highestPrice": "2736"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 953,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "32",
+      "r_highestPrice": "37",
+      "w_lowestPrice": "2465",
+      "w_highestPrice": "3157"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 954,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "33",
+      "r_highestPrice": "40",
+      "w_lowestPrice": "2751",
+      "w_highestPrice": "2975"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 955,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "72",
+      "r_highestPrice": "86",
+      "w_lowestPrice": "5363",
+      "w_highestPrice": "6008"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 956,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "55",
+      "r_highestPrice": "64",
+      "w_lowestPrice": "4569",
+      "w_highestPrice": "5167"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 957,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "42",
+      "r_highestPrice": "47",
+      "w_lowestPrice": "3207",
+      "w_highestPrice": "3606"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 958,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "26",
+      "r_highestPrice": "31",
+      "w_lowestPrice": "1908",
+      "w_highestPrice": "2283"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 959,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "75",
+      "r_highestPrice": "80",
+      "w_lowestPrice": "6000",
+      "w_highestPrice": "6500"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 960,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "50",
+      "r_highestPrice": "56",
+      "w_lowestPrice": "4042",
+      "w_highestPrice": "4554"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 961,
+      "unit_retail": 5,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "55",
+      "r_highestPrice": "80",
+      "w_lowestPrice": "2750",
+      "w_highestPrice": "3490"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 962,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "52",
+      "r_highestPrice": "58",
+      "w_lowestPrice": "4203",
+      "w_highestPrice": "4737"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 963,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "50",
+      "r_highestPrice": "47",
+      "w_lowestPrice": "3152",
+      "w_highestPrice": "3627"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 964,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "78",
+      "r_highestPrice": "89",
+      "w_lowestPrice": "8196",
+      "w_highestPrice": "6724"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 965,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "36",
+      "r_highestPrice": "42",
+      "w_lowestPrice": "2771",
+      "w_highestPrice": "3351"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 966,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "34",
+      "r_highestPrice": "40",
+      "w_lowestPrice": "2489",
+      "w_highestPrice": "2938"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 967,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "23",
+      "r_highestPrice": "27",
+      "w_lowestPrice": "1481",
+      "w_highestPrice": "1858"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 968,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "36",
+      "r_highestPrice": "39",
+      "w_lowestPrice": "2592",
+      "w_highestPrice": "3123"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 969,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "26",
+      "r_highestPrice": "29",
+      "w_lowestPrice": "1821",
+      "w_highestPrice": "2164"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 970,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "34",
+      "r_highestPrice": "40",
+      "w_lowestPrice": "2122",
+      "w_highestPrice": "2534"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 971,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "27",
+      "r_highestPrice": "30",
+      "w_lowestPrice": "1931",
+      "w_highestPrice": "2212"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 972,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "43",
+      "r_highestPrice": "50",
+      "w_lowestPrice": "3250",
+      "w_highestPrice": "3811"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 973,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "13",
+      "r_highestPrice": "15",
+      "w_lowestPrice": "1089",
+      "w_highestPrice": "1256"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 974,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "48",
+      "r_highestPrice": "55",
+      "w_lowestPrice": "3853",
+      "w_highestPrice": "4433"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 975,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "57",
+      "r_highestPrice": "47",
+      "w_lowestPrice": "3154",
+      "w_highestPrice": "3695"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 976,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "43",
+      "r_highestPrice": "45",
+      "w_lowestPrice": "3240",
+      "w_highestPrice": "3663"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 977,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "41",
+      "r_highestPrice": "47",
+      "w_lowestPrice": "3078",
+      "w_highestPrice": "3600"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 978,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "42",
+      "r_highestPrice": "49",
+      "w_lowestPrice": "3261",
+      "w_highestPrice": "3845"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 979,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "47",
+      "r_highestPrice": "54",
+      "w_lowestPrice": "3557",
+      "w_highestPrice": "4163"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 980,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "48",
+      "r_highestPrice": "55",
+      "w_lowestPrice": "3841",
+      "w_highestPrice": "4310"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 981,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "52",
+      "r_highestPrice": "61",
+      "w_lowestPrice": "4109",
+      "w_highestPrice": "4958"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 982,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "28",
+      "r_highestPrice": "31",
+      "w_lowestPrice": "2304",
+      "w_highestPrice": "2552"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 983,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "71",
+      "r_highestPrice": "83",
+      "w_lowestPrice": "5892",
+      "w_highestPrice": "7038"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 984,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "21",
+      "r_highestPrice": "25",
+      "w_lowestPrice": "1531",
+      "w_highestPrice": "1908"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 985,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "29",
+      "r_highestPrice": "34",
+      "w_lowestPrice": "2379",
+      "w_highestPrice": "2978"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 986,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "26",
+      "r_highestPrice": "31",
+      "w_lowestPrice": "1876",
+      "w_highestPrice": "2279"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 987,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "24",
+      "r_highestPrice": "29",
+      "w_lowestPrice": "1651",
+      "w_highestPrice": "1986"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 988,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "804",
+      "r_highestPrice": "28",
+      "w_lowestPrice": "1481",
+      "w_highestPrice": "1963"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 989,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "23",
+      "r_highestPrice": "28",
+      "w_lowestPrice": "1647",
+      "w_highestPrice": "2113"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 993,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "72",
+      "r_highestPrice": "75",
+      "w_lowestPrice": "6592",
+      "w_highestPrice": "6708"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 1011,
+      "unit_retail": 4,
+      "unit_wholesale": 8,
+      "r_lowestPrice": "25",
+      "r_highestPrice": "50",
+      "w_lowestPrice": "1637",
+      "w_highestPrice": "2118"
+    },
+    {
+      "com_grp_id": 43,
+      "commodity_id": 21014,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "93",
+      "r_highestPrice": "100",
+      "w_lowestPrice": "8500",
+      "w_highestPrice": "9200"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 710,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "59",
+      "r_highestPrice": "61",
+      "w_lowestPrice": "5536",
+      "w_highestPrice": "5612"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 711,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "52",
+      "r_highestPrice": "53",
+      "w_lowestPrice": "4712",
+      "w_highestPrice": "4812"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 712,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "49",
+      "r_highestPrice": "51",
+      "w_lowestPrice": "4576",
+      "w_highestPrice": "4732"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 713,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "16",
+      "r_highestPrice": "17",
+      "w_lowestPrice": "1260",
+      "w_highestPrice": "1425"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 715,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "51",
+      "r_highestPrice": "54",
+      "w_lowestPrice": "4700",
+      "w_highestPrice": "5026"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 718,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "7",
+      "r_highestPrice": "8",
+      "w_lowestPrice": "635",
+      "w_highestPrice": "703"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 721,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "10",
+      "r_highestPrice": "12",
+      "w_lowestPrice": "850",
+      "w_highestPrice": "1000"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 759,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "119",
+      "r_highestPrice": "123",
+      "w_lowestPrice": "11229",
+      "w_highestPrice": "11503"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 760,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "123",
+      "r_highestPrice": "124",
+      "w_lowestPrice": "12251",
+      "w_highestPrice": "11821"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 764,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "34",
+      "r_highestPrice": "751",
+      "w_lowestPrice": "3022",
+      "w_highestPrice": "3568"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 765,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "20",
+      "r_highestPrice": "23",
+      "w_lowestPrice": "1641",
+      "w_highestPrice": "1864"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 767,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "118",
+      "r_highestPrice": "130",
+      "w_lowestPrice": "10186",
+      "w_highestPrice": "10867"
+    },
+    {
+      "com_grp_id": 44,
+      "commodity_id": 768,
+      "unit_retail": 2,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "192",
+      "r_highestPrice": "236",
+      "w_lowestPrice": "15450",
+      "w_highestPrice": "19088"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 776,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "4",
+      "r_highestPrice": "16",
+      "w_lowestPrice": "180",
+      "w_highestPrice": "200"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 859,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "28",
+      "r_highestPrice": "30",
+      "w_lowestPrice": "1300",
+      "w_highestPrice": "1314"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 860,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "27",
+      "r_highestPrice": "27",
+      "w_lowestPrice": "1318",
+      "w_highestPrice": "1326"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 861,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "27",
+      "r_highestPrice": "28",
+      "w_lowestPrice": "1298",
+      "w_highestPrice": "1327"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 862,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "26",
+      "r_highestPrice": "26",
+      "w_lowestPrice": "1330",
+      "w_highestPrice": "1361"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 863,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "27",
+      "r_highestPrice": "28",
+      "w_lowestPrice": "1347",
+      "w_highestPrice": "1360"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 864,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "26",
+      "r_highestPrice": "27",
+      "w_lowestPrice": "1584",
+      "w_highestPrice": "1317"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 865,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "21",
+      "r_highestPrice": "22",
+      "w_lowestPrice": "1027",
+      "w_highestPrice": "1035"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 869,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "20",
+      "r_highestPrice": "21",
+      "w_lowestPrice": "977",
+      "w_highestPrice": "979"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 870,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "18",
+      "r_highestPrice": "18",
+      "w_lowestPrice": "825",
+      "w_highestPrice": "816"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 871,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "166",
+      "r_highestPrice": "207",
+      "w_lowestPrice": "7921",
+      "w_highestPrice": "9604"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 872,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "204",
+      "r_highestPrice": "279",
+      "w_lowestPrice": "9504",
+      "w_highestPrice": "12880"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 873,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "12",
+      "r_highestPrice": "15",
+      "w_lowestPrice": "449",
+      "w_highestPrice": "564"
+    },
+    {
+      "com_grp_id": 45,
+      "commodity_id": 874,
+      "unit_retail": 2,
+      "unit_wholesale": 15,
+      "r_lowestPrice": "22",
+      "r_highestPrice": "27",
+      "w_lowestPrice": "1014",
+      "w_highestPrice": "1065"
+    },
+    {
+      "com_grp_id": 46,
+      "commodity_id": 21015,
+      "unit_retail": 18,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "77",
+      "r_highestPrice": "82",
+      "w_lowestPrice": "7391",
+      "w_highestPrice": "7619"
+    },
+    {
+      "com_grp_id": 46,
+      "commodity_id": 21016,
+      "unit_retail": 18,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "100",
+      "r_highestPrice": "110",
+      "w_lowestPrice": "9350",
+      "w_highestPrice": "9750"
+    },
+    {
+      "com_grp_id": 46,
+      "commodity_id": 21017,
+      "unit_retail": 18,
+      "unit_wholesale": 1,
+      "r_lowestPrice": "81",
+      "r_highestPrice": "88",
+      "w_lowestPrice": "7564",
+      "w_highestPrice": "7972"
+    }
+  ]
+}

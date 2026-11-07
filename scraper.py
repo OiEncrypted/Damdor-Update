@@ -184,33 +184,23 @@ def parse_pdf(pdf_url, division_name):
 # ৫. মেইন এক্সিকিউশন
 # ==========================================
 if __name__ == "__main__":
-    print("লিংক খোঁজা হচ্ছে...")
     links = get_pdf_links()
-    
     if not links:
-        print("কোনো PDF পাওয়া যায়নি")
+        print("PDF পাওয়া যায়নি")
         exit()
-        
-    divisions = ["ঢাকা", "চট্টগ্রাম", "খুলনা", "রাজশাহী", "বরিশাল", "রংপুর", "সিলেট", "ময়মনসিংহ"]
     
-    all_data = []
+    # শুধু প্রথম PDF (ঢাকা বিভাগ)
+    print("ঢাকা বিভাগের PDF পার্স করা হচ্ছে...")
+    items = parse_pdf(links[0], "ঢাকা")
     
-    for i, link in enumerate(links):
-        div_name = divisions[i] if i < len(divisions) else f"বিভাগ {i+1}"
-        print(f"[{i+1}/{len(links)}] {div_name} বিভাগের PDF পার্স করা হচ্ছে...")
-        
-        items = parse_pdf(link, div_name)
-        all_data.extend(items)
-        print(f" -> {div_name}: {len(items)} টি পণ্য পাওয়া গেছে")
-
-    # ফাইনাল JSON স্ট্রাকচার
-    final_json = {
-        "updated_at": datetime.utcnow().isoformat() + "Z",
-        "total_items": len(all_data),
-        "data": all_data
-    }
-    
-    with open("prices.json", "w", encoding="utf-8") as f:
-        json.dump(final_json, f, ensure_ascii=False, indent=2)
-        
-    print(f"\nসব শেষ! মোট {len(all_data)} টি পণ্যের ডেটা prices.json এ সেভ হয়েছে।")
+    if items:
+        data = {
+            "updated_at": datetime.utcnow().isoformat() + "Z",
+            "total": len(items),
+            "items": items
+        }
+        with open("prices.json", "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f"সফল! {len(items)} টি পণ্য পাওয়া গেছে")
+    else:
+        print("কোনো ডেটা পাওয়া যায়নি")

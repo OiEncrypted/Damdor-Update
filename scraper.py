@@ -1,3 +1,6 @@
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -10,7 +13,7 @@ PAGE_URL = "https://dam.gov.bd/pages/static-pages/6922e0d1933eb65569e28b21"
 
 def get_pdf_links():
     headers = {"User-Agent": "Mozilla/5.0"}
-    res = requests.get(PAGE_URL, headers=headers, timeout=30)
+    res = requests.get(PAGE_URL, headers=headers, timeout=30, verify=False)
     soup = BeautifulSoup(res.text, "html.parser")
     links = []
     for a in soup.find_all('a', href=True):
@@ -20,7 +23,7 @@ def get_pdf_links():
 
 def parse_pdf(pdf_url):
     headers = {"User-Agent": "Mozilla/5.0"}
-    res = requests.get(pdf_url, headers=headers, timeout=60)
+    res = requests.get(pdf_url, headers=headers, timeout=60, verify=False)
     
     parser = BanglaPdfParser(ParserConfig(language="ben", dpi=300))
     pages = list(parser.parse(io.BytesIO(res.content), pages=[2]))

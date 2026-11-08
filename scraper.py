@@ -1,9 +1,3 @@
-
----
-
-### ফাইল ২: `scraper.py`
-
-```python
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 

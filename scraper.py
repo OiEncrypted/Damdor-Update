@@ -1,3 +1,9 @@
+
+---
+
+### ফাইল ২: `scraper.py`
+
+```python
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -19,6 +25,8 @@ import pdfplumber
 from mappings import NAME_MAP, PHRASE_MAP, WORD_MAP, KNOWN_PRODUCTS, BROKEN_MARKERS
 
 PAGE_URL = "https://dam.gov.bd/pages/static-pages/6922e0d1933eb65569e28b21"
+DIVISIONS = ["ঢাকা", "চট্টগ্রাম", "খুলনা", "রাজশাহী", "বরিশাল", "রংপুর", "সিলেট", "ময়মনসিংহ"]
+
 HISTORY_KEEP_DAYS = 60
 SIGNIFICANT_THRESHOLD_PCT = 20.0
 MIN_ACCEPTABLE_PRODUCTS = 50
@@ -26,14 +34,14 @@ LEARNED_FILE = "learned_mappings.json"
 MAX_LEARNED = 1000
 FUZZY_THRESHOLD = 0.85
 LEARN_THRESHOLD = 0.92
+
 BD_TZ = timezone(timedelta(hours=6))
 BN_DIGITS = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
-# বাংলা বর্ণের range — word boundary নির্ধারণে ব্যবহার
 BN_RANGE = "\u0980-\u09FF"
 
 
 # ==========================================
-# Utilities
+# Utility
 # ==========================================
 def bd_now():
     return datetime.now(BD_TZ)
@@ -80,7 +88,80 @@ def fuzzy_match(word, candidates):
 
 
 # ==========================================
-# Learned Mappings
+# Font Mapping System
+# ==========================================
+def detect_pdf_font(pdf_path):
+    """PDF-এ সবচেয়ে বেশি ব্যবহৃত ফন্টের নাম বের করে"""
+    try:
+        with pdfplumber.open(pdf_path) as pdf:
+            if len(pdf.pages) < 2:
+                return None
+            page = pdf.pages[1]
+            chars = page.chars
+            if not chars:
+                return None
+            font_counts = {}
+            for c in chars:
+                fname = c.get("fontname", "")
+                if not fname:
+                    continue
+                font_counts[fname] = font_counts.get(fname, 0) + 1
+            if not font_counts:
+                return None
+            top_font = max(font_counts, key=font_counts.get)
+            # pdfplumber fontname সাধারণত "/ABCDEF+NotoSansBengali" এরকম
+            # prefix বাদ দিই
+            clean = top_font.lstrip("/")
+            if "+" in clean:
+                clean = clean.split("+", 1)[1]
+            return clean
+    except Exception as e:
+        print(f"  ⚠️ ফন্ট চেক exception: {e}")
+        return None
+
+
+def load_font_map(font_name):
+    """ফন্টের নাম দিয়ে font_mappings/ folder থেকে mapping লোড করে"""
+    if not font_name:
+        return {}
+    safe = re.sub(r"[^a-zA-Z0-9_\-]", "_", font_name)
+    path = f"font_mappings/{safe}.json"
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            if isinstance(data, dict):
+                return {k: v for k, v in data.items() if isinstance(k, str) and isinstance(v, str)}
+    except Exception as e:
+        print(f"  ⚠️ font map load: {e}")
+    return {}
+
+
+def decode_with_font_map(text, font_map):
+    """font map দিয়ে ভাঙা অক্ষর ঠিক করে"""
+    if not font_map or not text:
+        return text
+    # দীর্ঘ key আগে চেক করার জন্য sort
+    keys = sorted(font_map.keys(), key=len, reverse=True)
+    result = []
+    i = 0
+    while i < len(text):
+        matched = False
+        for k in keys:
+            if text[i:i+len(k)] == k:
+                result.append(font_map[k])
+                i += len(k)
+                matched = True
+                break
+        if not matched:
+            result.append(text[i])
+            i += 1
+    return "".join(result)
+
+
+# ==========================================
+# Learned mappings (ফন্টের পরেও যেটা বাকি থাকে)
 # ==========================================
 def load_learned():
     if not os.path.exists(LEARNED_FILE):
@@ -91,7 +172,7 @@ def load_learned():
             if isinstance(d, dict):
                 return {k: v for k, v in d.items() if isinstance(k, str) and isinstance(v, str)}
     except Exception as e:
-        print(f"⚠️ learned load: {e}")
+        print(f"  ⚠️ learned load: {e}")
     return {}
 
 
@@ -101,18 +182,8 @@ def save_learned(m):
     atomic_write_json(LEARNED_FILE, m)
 
 
-def should_learn(raw, cleaned, fscore):
-    if not raw or not cleaned or raw == cleaned:
-        return False
-    if fscore < LEARN_THRESHOLD:
-        return False
-    if cleaned not in KNOWN_PRODUCTS:
-        return False
-    return True
-
-
 # ==========================================
-# Suspicion check
+# Suspicion
 # ==========================================
 def is_suspicious(name):
     if not name or len(name) < 3:
@@ -132,10 +203,9 @@ def is_suspicious(name):
 
 
 # ==========================================
-# NAME CLEANING (with word boundaries)
+# NAME CLEANING (font map + explicit + fuzzy)
 # ==========================================
 def _phrase_replace(name):
-    """Phrase map — পুরো স্ট্রিং substring replace"""
     for bad, good in PHRASE_MAP.items():
         if bad and bad in name:
             name = name.replace(bad, good)
@@ -143,11 +213,6 @@ def _phrase_replace(name):
 
 
 def _word_replace(name):
-    """
-    Word map — Bengali character boundary respected।
-    অর্থাৎ punctuation/symbol থাকলেও word match হবে,
-    কিন্তু অন্য Bengali word-এর ভেতরে match হবে না।
-    """
     for bad, good in WORD_MAP.items():
         if not bad:
             continue
@@ -156,37 +221,39 @@ def _word_replace(name):
     return name
 
 
-def clean_name(raw, learned):
+def clean_name(raw, font_map, learned):
     if not raw:
         return "", 0.0
 
-    name = unicodedata.normalize("NFC", raw.strip())
+    # ধাপ ১: ফন্ট ম্যাপিং দিয়ে decode
+    name = decode_with_font_map(raw.strip(), font_map)
+    name = unicodedata.normalize("NFC", name)
 
-    # 1. NAME_MAP (exact / startsWith)
+    # ধাপ ২: NAME_MAP
     if name in NAME_MAP:
         return NAME_MAP[name], 1.0
     for k, v in NAME_MAP.items():
         if name.startswith(k):
             return v, 1.0
 
-    # 2. Phrase map
+    # ধাপ ৩: PHRASE_MAP
     name = _phrase_replace(name)
 
-    # 3. Learned (highest priority after explicit)
+    # ধাপ ৪: learned
     if name in learned:
         return learned[name], 1.0
 
-    # 4. Word map (with boundary)
+    # ধাপ ৫: WORD_MAP
     name = _word_replace(name)
 
-    # 5. Cleanup — cid, numbers, symbols
+    # ধাপ ৬: পরিষ্কার
     name = re.sub(r"\(cid:\d+\)", "", name)
-    name = re.sub(r"(\s*[\d.]+){2,}\s*$", "", name)          # trailing number groups
-    name = re.sub(r"^[\d০-৯]+\s+", "", name)                 # leading number
-    name = re.sub(r"[\_\-\.\,\/\*]+", " ", name)             # symbols
+    name = re.sub(r"cid:\d+", "", name)
+    name = re.sub(r"(\s*[\d.]+){2,}\s*$", "", name)
+    name = re.sub(r"^[\d০-৯]+\s+", "", name)
+    name = re.sub(r"[\_\-\.\,\/\*]+", " ", name)
     name = re.sub(r"\s+", " ", name).strip()
 
-    # dedupe consecutive words
     parts = name.split()
     dedup = []
     for w in parts:
@@ -194,7 +261,7 @@ def clean_name(raw, learned):
             dedup.append(w)
     name = " ".join(dedup)
 
-    # 6. Fuzzy match (last resort)
+    # ধাপ ৭: fuzzy
     fscore = 0.0
     if is_suspicious(name) and len(name) > 2:
         out = []
@@ -212,7 +279,6 @@ def clean_name(raw, learned):
 
     if len(name) < 2 or name.isdigit():
         return "", 0.0
-
     return name, fscore
 
 
@@ -232,28 +298,53 @@ def fetch_with_retry(url, headers, retries=3, backoff=2):
     return None
 
 
-def get_pdf_links(errors):
+def parse_bengali_date(s):
+    s = s.translate(BN_DIGITS).strip()
+    try:
+        return datetime.strptime(s, "%d-%m-%Y").strftime("%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def get_dates_and_pdfs(errors):
     headers = {"User-Agent": "Mozilla/5.0"}
     try:
         r = fetch_with_retry(PAGE_URL, headers)
         if not r:
-            errors.append("মূল পেজ ফেইল")
-            return []
+            errors.append("মূল পেজ ফেচ ফেইল")
+            return {}
         soup = BeautifulSoup(r.text, "html.parser")
-        links = [a["href"] for a in soup.find_all("a", href=True) if a["href"].endswith(".pdf")]
-        unique = list(dict.fromkeys(links))[:8]
-        if len(unique) < 8:
-            errors.append(f"শুধু {len(unique)}টি PDF লিংক (৮ প্রত্যাশিত)")
-        return unique
+
+        date_map = {}
+        for table in soup.find_all("table"):
+            for row in table.find_all("tr"):
+                cells = row.find_all("td")
+                if len(cells) != 9:
+                    continue
+                date = parse_bengali_date(cells[0].get_text(strip=True))
+                if not date:
+                    continue
+                div_pdfs = {}
+                for i, div in enumerate(DIVISIONS):
+                    a = cells[i + 1].find("a", href=True)
+                    if a and a["href"].endswith(".pdf"):
+                        div_pdfs[div] = a["href"]
+                if div_pdfs:
+                    date_map[date] = div_pdfs
+
+        if not date_map:
+            errors.append("টেবিলে কোনো তারিখ/PDF পাওয়া যায়নি")
+        return date_map
     except Exception as e:
-        errors.append(f"লিংক exception: {e}")
-        return []
+        errors.append(f"পেজ parse exception: {e}")
+        return {}
 
 
-def parse_pdf(url, division, suspicious, learned, to_learn, errors):
+def parse_pdf(pdf_url, division, font_map, suspicious, learned, to_learn, errors):
     headers = {"User-Agent": "Mozilla/5.0"}
     items = []
-    r = fetch_with_retry(url, headers)
+
+    r = fetch_with_retry(pdf_url, headers)
     if not r:
         errors.append(f"{division}: ডাউনলোড ফেইল")
         return items
@@ -290,15 +381,24 @@ def parse_pdf(url, division, suspicious, learned, to_learn, errors):
                 mn, mx = safe_float(pm.group(1)), safe_float(pm.group(2))
                 if not mn or not mx or mn <= 0 or mx <= 0 or mn > mx:
                     continue
+
                 raw = text[:pm.start()].strip()
-                cleaned, fscore = clean_name(raw, learned)
+                cleaned, fscore = clean_name(raw, font_map, learned)
                 if not cleaned:
                     continue
 
                 if is_suspicious(cleaned):
-                    suspicious.append({"division": division, "raw": raw[:150], "cleaned": cleaned})
+                    suspicious.append({
+                        "division": division,
+                        "raw": raw[:150],
+                        "cleaned": cleaned
+                    })
 
-                if should_learn(raw, cleaned, fscore):
+                # auto-learn: high confidence + known product
+                if (cleaned in KNOWN_PRODUCTS
+                        and fscore >= LEARN_THRESHOLD
+                        and raw != cleaned
+                        and raw not in to_learn):
                     to_learn[raw] = cleaned
 
                 items.append({
@@ -308,12 +408,12 @@ def parse_pdf(url, division, suspicious, learned, to_learn, errors):
                     "max_price": f"{mx:.2f}",
                 })
     except Exception as e:
-        errors.append(f"{division}: পার্স exception — {e}")
+        errors.append(f"{division}: parse exception — {e}")
     return items
 
 
 # ==========================================
-# Deterministic dedup
+# Dedup + History + Tracking
 # ==========================================
 def dedup(items):
     groups = defaultdict(list)
@@ -331,9 +431,6 @@ def dedup(items):
     return sorted(out, key=lambda x: (x["division"], x["name"]))
 
 
-# ==========================================
-# History + Tracking
-# ==========================================
 def load_previous():
     if not os.path.exists("prices.json"):
         return None
@@ -343,21 +440,14 @@ def load_previous():
             if isinstance(d, dict) and "data" in d:
                 return d
     except Exception as e:
-        print(f"⚠️ prices load: {e}")
+        print(f"  ⚠️ prices load: {e}")
     return None
-
-
-def date_of(ts):
-    try:
-        return datetime.fromisoformat(ts.replace("Z", "+00:00")).strftime("%Y-%m-%d")
-    except Exception:
-        return "unknown"
 
 
 def save_history(prev):
     if not prev:
         return
-    d = date_of(prev.get("updated_at", ""))
+    d = prev.get("data_date", "unknown")
     if d == "unknown":
         return
     os.makedirs("history", exist_ok=True)
@@ -373,9 +463,8 @@ def save_history(prev):
 
 
 def build_tracking(curr, prev):
-    cdate = date_of(curr["updated_at"])
-    pdate = date_of(prev["updated_at"]) if prev else None
-
+    cdate = curr["data_date"]
+    pdate = prev.get("data_date") if prev else None
     prev_map = {(x["division"], x["name"]): x for x in prev.get("data", [])} if prev else {}
     curr_map = {(x["division"], x["name"]): x for x in curr["data"]}
 
@@ -384,7 +473,6 @@ def build_tracking(curr, prev):
         div, name = key
         c_min, c_max = float(c["min_price"]), float(c["max_price"])
         c_avg = (c_min + c_max) / 2
-
         if key in prev_map:
             p = prev_map[key]
             p_min, p_max = float(p["min_price"]), float(p["max_price"])
@@ -411,14 +499,13 @@ def build_tracking(curr, prev):
             })
 
     removed = [{"division": k[0], "name": k[1]} for k in prev_map if k not in curr_map]
-
     ups = sorted([c for c in changes if c["trend"] == "up"], key=lambda x: -x["change_pct"])[:5]
     downs = sorted([c for c in changes if c["trend"] == "down"], key=lambda x: x["change_pct"])[:5]
 
     return {
         "updated_at": utc_iso(),
-        "current_date": cdate, "previous_date": pdate,
-        "same_day_rerun": cdate == pdate,
+        "current_date": cdate,
+        "previous_date": pdate,
         "summary": {
             "total_products": len(curr_map),
             "increased": sum(1 for c in changes if c["trend"] == "up"),
@@ -447,26 +534,29 @@ def post_issue(repo, token, title, body, labels):
     try:
         r = requests.post(url, json={"title": title, "body": body, "labels": labels}, headers=headers, timeout=30)
         if r.status_code == 201:
-            print(f"  ✅ {r.json()['html_url']}")
+            print(f"  ✅ Issue: {r.json()['html_url']}")
         else:
             print(f"  ❌ Issue {r.status_code}")
     except Exception as e:
         print(f"  ❌ Issue exception: {e}")
 
 
-def create_issues(suspicious, tracking, total, errors):
+def create_issues(suspicious, tracking, total, errors, font_info):
     token = os.environ.get("GITHUB_TOKEN")
     repo = os.environ.get("GITHUB_REPOSITORY")
     if not token or not repo:
         return
     today = bd_date_str()
 
+    # Issue 1: Suspicious names
     if suspicious:
-        title = f"🔍 [Names] {len(suspicious)} টি সন্দেহজনক পণ্যের নাম — {today}"
+        title = f"🔍 [Names] {len(suspicious)} সন্দেহজনক নাম — {today}"
         lines = [
-            f"মোট **{total}** টি পণ্যের মধ্যে **{len(suspicious)}** টির নাম সন্দেহজনক।",
+            f"মোট **{total}** পণ্যের মধ্যে **{len(suspicious)}** সন্দেহজনক।",
             "",
-            "**কী করতে হবে:** `mappings.py`-এ `WORD_MAP` / `PHRASE_MAP`-এ যোগ করো।",
+            f"**ফন্ট:** `{font_info or 'unknown'}`",
+            "",
+            "**কী করতে হবে (প্রথমে font mapping, তারপর word map):**",
             "",
             "| বিভাগ | Raw Text | Cleaned |",
             "|-------|----------|---------|",
@@ -476,14 +566,17 @@ def create_issues(suspicious, tracking, total, errors):
             cl = s["cleaned"].replace("|", "\\|")[:80]
             lines.append(f"| {s['division']} | `{raw}` | {cl} |")
         if len(suspicious) > 150:
-            lines.append(f"\n_...এবং আরও {len(suspicious) - 150} টি_")
+            lines.append(f"\n_...আরও {len(suspicious) - 150} টি_")
         post_issue(repo, token, title, "\n".join(lines), ["suspicious-names"])
 
+    # Issue 2: Price changes
     sig = tracking.get("significant_changes", [])
-    if sig and not tracking.get("same_day_rerun"):
-        title = f"📈 [Prices] {len(sig)} টি পণ্যের দামে বড় পরিবর্তন — {today}"
+    if sig:
+        prev_date = tracking.get("previous_date") or "শুরু"
+        curr_date = tracking.get("current_date") or today
+        title = f"📈 [Prices] {len(sig)} পণ্যের দামে বড় পরিবর্তন — {today}"
         lines = [
-            f"**{tracking['previous_date']}** → **{tracking['current_date']}**",
+            f"**{prev_date}** → **{curr_date}**",
             f"{SIGNIFICANT_THRESHOLD_PCT}%+ পরিবর্তন:",
             "",
             "| বিভাগ | পণ্য | আগে | এখন | পরিবর্তন |",
@@ -497,12 +590,11 @@ def create_issues(suspicious, tracking, total, errors):
                 f"{s['current_min']:.0f}-{s['current_max']:.0f} | "
                 f"{arrow} {s['change_pct']:+.1f}% |"
             )
-        if len(sig) > 50:
-            lines.append(f"\n_...এবং আরও {len(sig) - 50} টি_")
         post_issue(repo, token, title, "\n".join(lines), ["price-changes"])
 
+    # Issue 3: Errors
     if errors:
-        title = f"🚨 [Error] স্ক্র্যাপিংয়ে সমস্যা — {today}"
+        title = f"🚨 [Error] স্ক্র্যাপিং — {today}"
         body = "\n".join([f"- {e}" for e in errors[:30]])
         post_issue(repo, token, title, body, ["scraper-error"])
 
@@ -512,7 +604,7 @@ def create_issues(suspicious, tracking, total, errors):
 # ==========================================
 def main():
     print("=" * 60)
-    print("🚀 বাজারদর স্ক্র্যাপার v4")
+    print("🚀 বাজারদর স্ক্র্যাপার v6 (Font-Aware)")
     print("=" * 60)
 
     errors, suspicious, to_learn = [], [], {}
@@ -520,59 +612,99 @@ def main():
     if learned:
         print(f"📚 Learned: {len(learned)}")
 
+    date_map = get_dates_and_pdfs(errors)
+    if not date_map:
+        create_issues(suspicious, {"significant_changes": []}, 0, errors, None)
+        raise SystemExit("❌ কোনো ডেটা পাওয়া যায়নি")
+
+    print(f"📅 পেজে তারিখ: {sorted(date_map.keys(), reverse=True)[:5]}")
+    newest_date = max(date_map.keys())
+    division_pdfs = date_map[newest_date]
+    print(f"🎯 Target: {newest_date} ({len(division_pdfs)} division)")
+
     prev = load_previous()
-    print(f"📖 পূর্ববর্তী: {prev['total_items'] if prev else 'নেই'}")
+    prev_date = prev.get("data_date") if prev else None
+    print(f"📖 Previous: {prev_date or 'নেই'}")
 
-    links = get_pdf_links(errors)
-    if not links:
-        create_issues(suspicious, {"significant_changes": [], "previous_date": None, "current_date": None}, 0, errors)
-        raise SystemExit("❌ PDF পাওয়া যায়নি")
+    if prev_date and newest_date <= prev_date:
+        print(f"\n⏭️ নতুন ডেটা নেই। {newest_date} <= {prev_date}")
+        if errors:
+            create_issues(suspicious, {"significant_changes": []}, prev.get("total_items", 0), errors, None)
+        return
 
-    divisions = ["ঢাকা", "চট্টগ্রাম", "খুলনা", "রাজশাহী", "বরিশাল", "রংপুর", "সিলেট", "ময়মনসিংহ"]
+    # ফন্ট ডিটেক্ট (প্রথম PDF থেকে)
+    print("\n🔤 ফন্ট চেক করা হচ্ছে...")
+    first_url = list(division_pdfs.values())[0]
+    font_map = {}
+    font_name = None
+    try:
+        r = fetch_with_retry(first_url, {"User-Agent": "Mozilla/5.0"})
+        if r:
+            with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
+                tmp.write(r.content)
+                tmp_path = tmp.name
+            font_name = detect_pdf_font(tmp_path)
+            os.remove(tmp_path)
+            print(f"  ফন্ট: {font_name}")
+
+            if font_name:
+                font_map = load_font_map(font_name)
+                if font_map:
+                    print(f"  ✅ Font map: {len(font_map)} এন্ট্রি")
+                else:
+                    print(f"  ⚠️ font_mappings/{font_name}.json নেই")
+                    errors.append(f"font_mappings/{font_name}.json তৈরি করা দরকার")
+    except Exception as e:
+        print(f"  ⚠️ ফন্ট চেক exception: {e}")
+
+    # পার্স
     all_items = []
-
-    for i, link in enumerate(links):
-        div = divisions[i] if i < len(divisions) else f"বিভাগ-{i+1}"
-        print(f"\n[{i+1}/{len(links)}] {div}...")
-        its = parse_pdf(link, div, suspicious, learned, to_learn, errors)
+    for div, url in division_pdfs.items():
+        print(f"\n[{div}]...")
+        its = parse_pdf(url, div, font_map, suspicious, learned, to_learn, errors)
         all_items.extend(its)
         print(f"  ✅ {len(its)}")
 
     unique = dedup(all_items)
-    print(f"\n📦 Dedup পরে: {len(unique)}")
+    print(f"\n📦 Dedup: {len(unique)}")
 
     if len(unique) < MIN_ACCEPTABLE_PRODUCTS:
         errors.append(f"পণ্য কমে গেছে: {len(unique)} < {MIN_ACCEPTABLE_PRODUCTS}")
-        print("🚨 Validation fail — পুরোনো prices.json রাখা হচ্ছে")
+        print("🚨 Validation fail")
+        create_issues(suspicious, {"significant_changes": []}, prev.get("total_items", 0) if prev else 0, errors, font_name)
+        return
 
     if to_learn:
         save_learned({**learned, **to_learn})
         print(f"📚 {len(to_learn)} নতুন learned")
 
+    save_history(prev)
+
     current = {
         "updated_at": utc_iso(),
+        "data_date": newest_date,
         "total_items": len(unique),
         "suspicious_count": len(suspicious),
+        "font": font_name,
         "divisions": sorted(set(x["division"] for x in unique)),
         "data": unique,
     }
-
-    save_history(prev)
     atomic_write_json("prices.json", current)
+
     tracking = build_tracking(current, prev)
     atomic_write_json("tracking.json", tracking)
 
     print("\n" + "=" * 60)
     s = tracking["summary"]
     print(f"🎉 পণ্য: {len(unique)} | সন্দেহ: {len(suspicious)}")
-    if tracking["previous_date"]:
-        print(f"📅 {tracking['previous_date']} → {tracking['current_date']}" + (" (same-day)" if tracking["same_day_rerun"] else ""))
+    if prev_date:
+        print(f"📅 {prev_date} → {newest_date}")
         print(f"🔺{s['increased']}  🔻{s['decreased']}  ➡️{s['stable']}  🆕{s['new_products']}  🚨{s['significant_changes']}")
     if errors:
         print(f"⚠️ {len(errors)} error")
     print("=" * 60)
 
-    create_issues(suspicious, tracking, len(unique), errors)
+    create_issues(suspicious, tracking, len(unique), errors, font_name)
 
 
 if __name__ == "__main__":

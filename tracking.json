@@ -1,142 +1,88 @@
 {
-  "updated_at": "2026-11-09T11:26:51.936821Z",
-  "current_date": "2026-11-09",
-  "previous_date": "2026-11-08",
+  "updated_at": "2026-11-10T11:07:29.957404Z",
+  "current_date": "2026-11-10",
+  "previous_date": "2026-11-09",
   "summary": {
     "total_products": 138,
-    "increased": 3,
-    "decreased": 3,
-    "stable": 119,
-    "new_products": 13,
-    "removed_products": 13,
+    "increased": 1,
+    "decreased": 7,
+    "stable": 98,
+    "new_products": 32,
+    "removed_products": 32,
     "significant_changes": 0
   },
   "top_increases": [
     {
       "division": "ঢাকা",
-      "name": "মিষ্টি কুমড়া",
-      "current_min": 30.0,
-      "current_max": 50.0,
-      "previous_min": 30.0,
-      "previous_max": 40.0,
-      "change_pct": 14.29,
-      "trend": "up",
-      "significant": false
-    },
-    {
-      "division": "ঢাকা",
-      "name": "চালকুমড়া (জালি)",
+      "name": "কাঁকরোল",
       "current_min": 40.0,
-      "current_max": 70.0,
-      "previous_min": 40.0,
-      "previous_max": 60.0,
-      "change_pct": 10.0,
-      "trend": "up",
-      "significant": false
-    },
-    {
-      "division": "ঢাকা",
-      "name": "লাউ",
-      "current_min": 30.0,
       "current_max": 80.0,
       "previous_min": 30.0,
-      "previous_max": 70.0,
-      "change_pct": 10.0,
+      "previous_max": 80.0,
+      "change_pct": 9.09,
       "trend": "up",
       "significant": false
     }
   ],
   "top_decreases": [
     {
-      "division": "রংপুর",
-      "name": "ফার্ম",
-      "current_min": 42.0,
-      "current_max": 43.0,
-      "previous_min": 44.0,
-      "previous_max": 46.0,
-      "change_pct": -5.56,
-      "trend": "down",
-      "significant": false
-    },
-    {
-      "division": "চট্টগ্রাম",
-      "name": "ডিম ফার্মের ডিম",
-      "current_min": 10.0,
-      "current_max": 10.5,
-      "previous_min": 10.5,
-      "previous_max": 11.0,
-      "change_pct": -4.65,
+      "division": "ঢাকা",
+      "name": "শসা",
+      "current_min": 40.0,
+      "current_max": 70.0,
+      "previous_min": 50.0,
+      "previous_max": 80.0,
+      "change_pct": -15.38,
       "trend": "down",
       "significant": false
     },
     {
       "division": "ঢাকা",
-      "name": "আদা (আমদানীকৃত)",
-      "current_min": 130.0,
-      "current_max": 170.0,
-      "previous_min": 130.0,
-      "previous_max": 180.0,
-      "change_pct": -3.23,
+      "name": "চালকুমড়া (জালি)",
+      "current_min": 40.0,
+      "current_max": 60.0,
+      "previous_min": 40.0,
+      "previous_max": 70.0,
+      "change_pct": -9.09,
+      "trend": "down",
+      "significant": false
+    },
+    {
+      "division": "ঢাকা",
+      "name": "ফুলকপি",
+      "current_min": 25.0,
+      "current_max": 50.0,
+      "previous_min": 30.0,
+      "previous_max": 50.0,
+      "change_pct": -6.25,
+      "trend": "down",
+      "significant": false
+    },
+    {
+      "division": "খুলনা",
+      "name": "আপেল",
+      "current_min": 320.0,
+      "current_max": 380.0,
+      "previous_min": 340.0,
+      "previous_max": 400.0,
+      "change_pct": -5.41,
+      "trend": "down",
+      "significant": false
+    },
+    {
+      "division": "রংপুর",
+      "name": "ফার্ম",
+      "current_min": 40.0,
+      "current_max": 42.0,
+      "previous_min": 42.0,
+      "previous_max": 43.0,
+      "change_pct": -3.53,
       "trend": "down",
       "significant": false
     }
   ],
   "significant_changes": [],
   "new_products": [
-    {
-      "division": "খুলনা",
-      "name": "কমোরে মুরনে (দেশি)"
-    },
-    {
-      "division": "খুলনা",
-      "name": "কমোরে মুরনে (ব্রয়লার)"
-    },
-    {
-      "division": "খুলনা",
-      "name": "খাসি মাংস"
-    },
-    {
-      "division": "খুলনা",
-      "name": "চাল কারওয়ান মাঝারি (নি"
-    },
-    {
-      "division": "খুলনা",
-      "name": "ডিম (সোের) ৪টি"
-    },
-    {
-      "division": "খুলনা",
-      "name": "মাংস েরু"
-    },
-    {
-      "division": "খুলনা",
-      "name": "সুেন্ধী (নি িোি৩৪ ইপ্রিনিযো নকদে)নি"
-    },
-    {
-      "division": "বরিশাল",
-      "name": "চাল মাঝারি (পাটনা নী ধান"
-    },
-    {
-      "division": "বরিশাল",
-      "name": "মুরগি (ব্রয়লার)"
-    },
-    {
-      "division": "ময়মনসিংহ",
-      "name": "উিশী মোটা (ব্রি"
-    },
-    {
-      "division": "ময়মনসিংহ",
-      "name": "ছাগলের মোিংস"
-    },
-    {
-      "division": "ময়মনসিংহ",
-      "name": "ডিম িোম ডিম"
-    },
-    {
-      "division": "ময়মনসিংহ",
-      "name": "মোিংস গরু"
-    }
-  ],
-  "removed_products": [
     {
       "division": "খুলনা",
       "name": "চাল কারওয়ান মাঝারি (নী ধান"
@@ -166,6 +112,82 @@
       "name": "েোনসর মাংস"
     },
     {
+      "division": "চট্টগ্রাম",
+      "name": "আরেি"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "ইলিশ েো (ক োট)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "কজাতের (ব্রি ১১)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "কিিোনেয়ো েো (দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "কেোরগ মুরগি (দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "কেোরগ মুরগি (ব্রয়লার"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "গরুর েোংস"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "গুঁড়া দুধ (েনিপ্যোে)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "চাল (প্যাকেটজাত কজাতের ও দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "চাল েোঝোনর (নি"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "তেলাপিয়া েো"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "নডেঃ ফোে বসাদা"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "নডেঃ মুরগি (দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "রুই েো"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "র্ কে োড োর (ব্রয়লার)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "র্সোরুি ো(েনি ইরিোশযোোনইেি))"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "েটি"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "েোংগোস েো (দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "েোংস গরু ((হাড়সহ))"
+    },
+    {
       "division": "বরিশাল",
       "name": "চাল মাঝারি (পাটনা নি"
     },
@@ -190,16 +212,146 @@
       "name": "মাংস গরু"
     }
   ],
+  "removed_products": [
+    {
+      "division": "খুলনা",
+      "name": "কমোরে মুরনে (দেশি)"
+    },
+    {
+      "division": "খুলনা",
+      "name": "কমোরে মুরনে (ব্রয়লার)"
+    },
+    {
+      "division": "খুলনা",
+      "name": "খাসি মাংস"
+    },
+    {
+      "division": "খুলনা",
+      "name": "চাল কারওয়ান মাঝারি (নি"
+    },
+    {
+      "division": "খুলনা",
+      "name": "ডিম (সোের) ৪টি"
+    },
+    {
+      "division": "খুলনা",
+      "name": "মাংস েরু"
+    },
+    {
+      "division": "খুলনা",
+      "name": "সুেন্ধী (নি িোি৩৪ ইপ্রিনিযো নকদে)নি"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "(িডিমর)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "আপেল"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "ইলিশ মো (ক োট)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "কাতলা মো (দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "গরুর মাংস"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "গুঁড়া দুধ (প্যাকেট)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "চাল (প্যাকেটজাত মোটা ও দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "চাল মাঝারি (নী ধান"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "ডিম ফার্মের ডিম"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "ডিম মুরগি (দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "তেলাপিয়া মো"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "পটি"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "পাঙাশ মো (দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "মাংস গরু ((হাড়সহ))"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "মুরগি (দেশি)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "মুরগি (ব্রয়লার"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "মোটা (ব্রি ১১)"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "রুই মো"
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "র্সোরুি ো(মনি ইরিোশযোোনইদি))"
+    },
+    {
+      "division": "বরিশাল",
+      "name": "চাল মাঝারি (পাটনা নী ধান"
+    },
+    {
+      "division": "বরিশাল",
+      "name": "মুরগি (ব্রয়লার)"
+    },
+    {
+      "division": "ময়মনসিংহ",
+      "name": "উিশী মোটা (ব্রি"
+    },
+    {
+      "division": "ময়মনসিংহ",
+      "name": "ছাগলের মোিংস"
+    },
+    {
+      "division": "ময়মনসিংহ",
+      "name": "ডিম িোম ডিম"
+    },
+    {
+      "division": "ময়মনসিংহ",
+      "name": "মোিংস গরু"
+    }
+  ],
   "all_changes": [
     {
       "division": "খুলনা",
       "name": "আপেল",
-      "current_min": 340.0,
-      "current_max": 400.0,
+      "current_min": 320.0,
+      "current_max": 380.0,
       "previous_min": 340.0,
       "previous_max": 400.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "change_pct": -5.41,
+      "trend": "down",
       "significant": false
     },
     {
@@ -215,28 +367,6 @@
     },
     {
       "division": "খুলনা",
-      "name": "কমোরে মুরনে (দেশি)",
-      "current_min": 540.0,
-      "current_max": 550.0,
-      "previous_min": null,
-      "previous_max": null,
-      "change_pct": null,
-      "trend": "new",
-      "significant": false
-    },
-    {
-      "division": "খুলনা",
-      "name": "কমোরে মুরনে (ব্রয়লার)",
-      "current_min": 170.0,
-      "current_max": 175.0,
-      "previous_min": null,
-      "previous_max": null,
-      "change_pct": null,
-      "trend": "new",
-      "significant": false
-    },
-    {
-      "division": "খুলনা",
       "name": "কাতলা মাছ (দেশি)",
       "current_min": 150.0,
       "current_max": 180.0,
@@ -244,17 +374,6 @@
       "previous_max": 180.0,
       "change_pct": 0.0,
       "trend": "stable",
-      "significant": false
-    },
-    {
-      "division": "খুলনা",
-      "name": "খাসি মাংস",
-      "current_min": 1200.0,
-      "current_max": 1250.0,
-      "previous_min": null,
-      "previous_max": null,
-      "change_pct": null,
-      "trend": "new",
       "significant": false
     },
     {
@@ -292,7 +411,7 @@
     },
     {
       "division": "খুলনা",
-      "name": "চাল কারওয়ান মাঝারি (নি",
+      "name": "চাল কারওয়ান মাঝারি (নী ধান",
       "current_min": 52.0,
       "current_max": 54.0,
       "previous_min": null,
@@ -303,7 +422,7 @@
     },
     {
       "division": "খুলনা",
-      "name": "ডিম (সোের) ৪টি",
+      "name": "ডিম (হাঁস) ৪টি",
       "current_min": 25.0,
       "current_max": 35.0,
       "previous_min": null,
@@ -336,9 +455,31 @@
     },
     {
       "division": "খুলনা",
-      "name": "মাংস েরু",
+      "name": "মাংস গরু",
       "current_min": 750.0,
       "current_max": 760.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "খুলনা",
+      "name": "মুরগি (দেশি)",
+      "current_min": 540.0,
+      "current_max": 550.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "খুলনা",
+      "name": "মুরগি (ব্রয়লার)",
+      "current_min": 170.0,
+      "current_max": 175.0,
       "previous_min": null,
       "previous_max": null,
       "change_pct": null,
@@ -358,7 +499,7 @@
     },
     {
       "division": "খুলনা",
-      "name": "সুেন্ধী (নি িোি৩৪ ইপ্রিনিযো নকদে)নি",
+      "name": "সুগন্ধী (নী ধান৩৪ ইপ্রিনিযো নকদে)নি",
       "current_min": 120.0,
       "current_max": 190.0,
       "previous_min": null,
@@ -390,36 +531,36 @@
       "significant": false
     },
     {
-      "division": "চট্টগ্রাম",
-      "name": "(িডিমর)",
-      "current_min": 170.0,
-      "current_max": 175.0,
-      "previous_min": 170.0,
-      "previous_max": 175.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "division": "খুলনা",
+      "name": "েোনসর মাংস",
+      "current_min": 1200.0,
+      "current_max": 1250.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "আপেল",
+      "name": "আরেি",
       "current_min": 350.0,
       "current_max": 400.0,
-      "previous_min": 350.0,
-      "previous_max": 400.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "ইলিশ মো (ক োট)",
+      "name": "ইলিশ েো (ক োট)",
       "current_min": 750.0,
       "current_max": 1400.0,
-      "previous_min": 750.0,
-      "previous_max": 1400.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
@@ -435,13 +576,13 @@
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "কাতলা মো (দেশি)",
-      "current_min": 180.0,
-      "current_max": 230.0,
-      "previous_min": 180.0,
-      "previous_max": 230.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "name": "কজাতের (ব্রি ১১)",
+      "current_min": 48.0,
+      "current_max": 55.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
@@ -457,46 +598,79 @@
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "গরুর মাংস",
+      "name": "কিিোনেয়ো েো (দেশি)",
+      "current_min": 180.0,
+      "current_max": 230.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "কেোরগ মুরগি (দেশি)",
+      "current_min": 620.0,
+      "current_max": 640.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "কেোরগ মুরগি (ব্রয়লার",
+      "current_min": 280.0,
+      "current_max": 320.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "গরুর েোংস",
       "current_min": 1250.0,
       "current_max": 1350.0,
-      "previous_min": 1250.0,
-      "previous_max": 1350.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "গুঁড়া দুধ (প্যাকেট)",
+      "name": "গুঁড়া দুধ (েনিপ্যোে)",
       "current_min": 700.0,
       "current_max": 930.0,
-      "previous_min": 700.0,
-      "previous_max": 930.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "চাল (প্যাকেটজাত মোটা ও দেশি)",
+      "name": "চাল (প্যাকেটজাত কজাতের ও দেশি)",
       "current_min": 22.0,
       "current_max": 42.0,
-      "previous_min": 22.0,
-      "previous_max": 42.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "চাল মাঝারি (নী ধান",
+      "name": "চাল েোঝোনর (নি",
       "current_min": 60.0,
       "current_max": 65.0,
-      "previous_min": 60.0,
-      "previous_max": 65.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
@@ -512,123 +686,101 @@
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "ডিম ফার্মের ডিম",
-      "current_min": 10.0,
-      "current_max": 10.5,
-      "previous_min": 10.5,
-      "previous_max": 11.0,
-      "change_pct": -4.65,
-      "trend": "down",
-      "significant": false
-    },
-    {
-      "division": "চট্টগ্রাম",
-      "name": "ডিম মুরগি (দেশি)",
-      "current_min": 18.75,
-      "current_max": 20.0,
-      "previous_min": 18.75,
-      "previous_max": 20.0,
-      "change_pct": 0.0,
-      "trend": "stable",
-      "significant": false
-    },
-    {
-      "division": "চট্টগ্রাম",
-      "name": "তেলাপিয়া মো",
+      "name": "তেলাপিয়া েো",
       "current_min": 330.0,
       "current_max": 350.0,
-      "previous_min": 330.0,
-      "previous_max": 350.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "পটি",
-      "current_min": 50.0,
-      "current_max": 55.0,
-      "previous_min": 50.0,
-      "previous_max": 55.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "name": "নডেঃ ফোে বসাদা",
+      "current_min": 10.0,
+      "current_max": 10.5,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "পাঙাশ মো (দেশি)",
-      "current_min": 160.0,
-      "current_max": 180.0,
-      "previous_min": 160.0,
-      "previous_max": 180.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "name": "নডেঃ মুরগি (দেশি)",
+      "current_min": 18.75,
+      "current_max": 20.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "মাংস গরু ((হাড়সহ))",
-      "current_min": 800.0,
-      "current_max": 850.0,
-      "previous_min": 800.0,
-      "previous_max": 850.0,
-      "change_pct": 0.0,
-      "trend": "stable",
-      "significant": false
-    },
-    {
-      "division": "চট্টগ্রাম",
-      "name": "মুরগি (দেশি)",
-      "current_min": 620.0,
-      "current_max": 640.0,
-      "previous_min": 620.0,
-      "previous_max": 640.0,
-      "change_pct": 0.0,
-      "trend": "stable",
-      "significant": false
-    },
-    {
-      "division": "চট্টগ্রাম",
-      "name": "মুরগি (ব্রয়লার",
-      "current_min": 290.0,
-      "current_max": 330.0,
-      "previous_min": 290.0,
-      "previous_max": 330.0,
-      "change_pct": 0.0,
-      "trend": "stable",
-      "significant": false
-    },
-    {
-      "division": "চট্টগ্রাম",
-      "name": "মোটা (ব্রি ১১)",
-      "current_min": 48.0,
-      "current_max": 55.0,
-      "previous_min": 48.0,
-      "previous_max": 55.0,
-      "change_pct": 0.0,
-      "trend": "stable",
-      "significant": false
-    },
-    {
-      "division": "চট্টগ্রাম",
-      "name": "রুই মো",
+      "name": "রুই েো",
       "current_min": 320.0,
       "current_max": 350.0,
-      "previous_min": 320.0,
-      "previous_max": 350.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
       "division": "চট্টগ্রাম",
-      "name": "র্সোরুি ো(মনি ইরিোশযোোনইদি))",
+      "name": "র্ কে োড োর (ব্রয়লার)",
+      "current_min": 165.0,
+      "current_max": 170.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "র্সোরুি ো(েনি ইরিোশযোোনইেি))",
       "current_min": 75.0,
       "current_max": 85.0,
-      "previous_min": 75.0,
-      "previous_max": 85.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "েটি",
+      "current_min": 55.0,
+      "current_max": 60.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "েোংগোস েো (দেশি)",
+      "current_min": 160.0,
+      "current_max": 180.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "চট্টগ্রাম",
+      "name": "েোংস গরু ((হাড়সহ))",
+      "current_min": 800.0,
+      "current_max": 850.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
@@ -648,9 +800,9 @@
       "current_min": 130.0,
       "current_max": 170.0,
       "previous_min": 130.0,
-      "previous_max": 180.0,
-      "change_pct": -3.23,
-      "trend": "down",
+      "previous_max": 170.0,
+      "change_pct": 0.0,
+      "trend": "stable",
       "significant": false
     },
     {
@@ -678,12 +830,12 @@
     {
       "division": "ঢাকা",
       "name": "কাঁকরোল",
-      "current_min": 30.0,
+      "current_min": 40.0,
       "current_max": 80.0,
       "previous_min": 30.0,
       "previous_max": 80.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "change_pct": 9.09,
+      "trend": "up",
       "significant": false
     },
     {
@@ -712,11 +864,11 @@
       "division": "ঢাকা",
       "name": "চালকুমড়া (জালি)",
       "current_min": 40.0,
-      "current_max": 70.0,
+      "current_max": 60.0,
       "previous_min": 40.0,
-      "previous_max": 60.0,
-      "change_pct": 10.0,
-      "trend": "up",
+      "previous_max": 70.0,
+      "change_pct": -9.09,
+      "trend": "down",
       "significant": false
     },
     {
@@ -832,12 +984,12 @@
     {
       "division": "ঢাকা",
       "name": "ফুলকপি",
-      "current_min": 30.0,
+      "current_min": 25.0,
       "current_max": 50.0,
       "previous_min": 30.0,
       "previous_max": 50.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "change_pct": -6.25,
+      "trend": "down",
       "significant": false
     },
     {
@@ -912,9 +1064,9 @@
       "current_min": 30.0,
       "current_max": 50.0,
       "previous_min": 30.0,
-      "previous_max": 40.0,
-      "change_pct": 14.29,
-      "trend": "up",
+      "previous_max": 50.0,
+      "change_pct": 0.0,
+      "trend": "stable",
       "significant": false
     },
     {
@@ -975,12 +1127,12 @@
     {
       "division": "ঢাকা",
       "name": "রুই মাছ",
-      "current_min": 320.0,
+      "current_min": 300.0,
       "current_max": 500.0,
       "previous_min": 320.0,
       "previous_max": 500.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "change_pct": -2.44,
+      "trend": "down",
       "significant": false
     },
     {
@@ -989,20 +1141,20 @@
       "current_min": 30.0,
       "current_max": 80.0,
       "previous_min": 30.0,
-      "previous_max": 70.0,
-      "change_pct": 10.0,
-      "trend": "up",
+      "previous_max": 80.0,
+      "change_pct": 0.0,
+      "trend": "stable",
       "significant": false
     },
     {
       "division": "ঢাকা",
       "name": "শসা",
-      "current_min": 50.0,
-      "current_max": 80.0,
+      "current_min": 40.0,
+      "current_max": 70.0,
       "previous_min": 50.0,
       "previous_max": 80.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "change_pct": -15.38,
+      "trend": "down",
       "significant": false
     },
     {
@@ -1117,7 +1269,7 @@
     },
     {
       "division": "বরিশাল",
-      "name": "চাল মাঝারি (পাটনা নী ধান",
+      "name": "চাল মাঝারি (পাটনা নি",
       "current_min": 60.0,
       "current_max": 65.0,
       "previous_min": null,
@@ -1227,17 +1379,6 @@
     },
     {
       "division": "বরিশাল",
-      "name": "মুরগি (ব্রয়লার)",
-      "current_min": 160.0,
-      "current_max": 170.0,
-      "previous_min": null,
-      "previous_max": null,
-      "change_pct": null,
-      "trend": "new",
-      "significant": false
-    },
-    {
-      "division": "বরিশাল",
       "name": "মুরগি (সোনালি ব্রয়লার)ব",
       "current_min": 270.0,
       "current_max": 300.0,
@@ -1245,6 +1386,17 @@
       "previous_max": 300.0,
       "change_pct": 0.0,
       "trend": "stable",
+      "significant": false
+    },
+    {
+      "division": "বরিশাল",
+      "name": "মুরগি (িডিমর)",
+      "current_min": 160.0,
+      "current_max": 180.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
@@ -1260,7 +1412,7 @@
     },
     {
       "division": "ময়মনসিংহ",
-      "name": "উিশী মোটা (ব্রি",
+      "name": "উফশী মোটা (ব্রি",
       "current_min": 54.0,
       "current_max": 58.0,
       "previous_min": null,
@@ -1315,7 +1467,7 @@
     },
     {
       "division": "ময়মনসিংহ",
-      "name": "ছাগলের মোিংস",
+      "name": "ছাগলের মাংস",
       "current_min": 1100.0,
       "current_max": 1200.0,
       "previous_min": null,
@@ -1337,6 +1489,17 @@
     },
     {
       "division": "ময়মনসিংহ",
+      "name": "ডিম ফার্মের ডিম",
+      "current_min": 10.5,
+      "current_max": 11.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
+      "significant": false
+    },
+    {
+      "division": "ময়মনসিংহ",
       "name": "ডিম মুরগি (দেশি)",
       "current_min": 18.0,
       "current_max": 20.0,
@@ -1348,17 +1511,6 @@
     },
     {
       "division": "ময়মনসিংহ",
-      "name": "ডিম িোম ডিম",
-      "current_min": 10.5,
-      "current_max": 11.0,
-      "previous_min": null,
-      "previous_max": null,
-      "change_pct": null,
-      "trend": "new",
-      "significant": false
-    },
-    {
-      "division": "ময়মনসিংহ",
       "name": "দেশি (নি ৫০",
       "current_min": 76.0,
       "current_max": 86.0,
@@ -1366,6 +1518,17 @@
       "previous_max": 86.0,
       "change_pct": 0.0,
       "trend": "stable",
+      "significant": false
+    },
+    {
+      "division": "ময়মনসিংহ",
+      "name": "মাংস গরু",
+      "current_min": 750.0,
+      "current_max": 780.0,
+      "previous_min": null,
+      "previous_max": null,
+      "change_pct": null,
+      "trend": "new",
       "significant": false
     },
     {
@@ -1399,17 +1562,6 @@
       "previous_max": 170.0,
       "change_pct": 0.0,
       "trend": "stable",
-      "significant": false
-    },
-    {
-      "division": "ময়মনসিংহ",
-      "name": "মোিংস গরু",
-      "current_min": 750.0,
-      "current_max": 780.0,
-      "previous_min": null,
-      "previous_max": null,
-      "change_pct": null,
-      "trend": "new",
       "significant": false
     },
     {
@@ -1448,11 +1600,11 @@
     {
       "division": "রংপুর",
       "name": "ফার্ম",
-      "current_min": 42.0,
-      "current_max": 43.0,
-      "previous_min": 44.0,
-      "previous_max": 46.0,
-      "change_pct": -5.56,
+      "current_min": 40.0,
+      "current_max": 42.0,
+      "previous_min": 42.0,
+      "previous_max": 43.0,
+      "change_pct": -3.53,
       "trend": "down",
       "significant": false
     },
@@ -1470,12 +1622,12 @@
     {
       "division": "রংপুর",
       "name": "মুরগি (িয়িাি)",
-      "current_min": 165.0,
-      "current_max": 170.0,
+      "current_min": 160.0,
+      "current_max": 165.0,
       "previous_min": 165.0,
       "previous_max": 170.0,
-      "change_pct": 0.0,
-      "trend": "stable",
+      "change_pct": -2.99,
+      "trend": "down",
       "significant": false
     },
     {
@@ -1483,9 +1635,9 @@
       "name": "মুরগি মুরগি(দেশি সোনালি)",
       "current_min": 290.0,
       "current_max": 320.0,
-      "previous_min": 280.0,
+      "previous_min": 290.0,
       "previous_max": 320.0,
-      "change_pct": 1.67,
+      "change_pct": 0.0,
       "trend": "stable",
       "significant": false
     },

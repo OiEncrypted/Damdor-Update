@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-10T11:07:29.956174Z",
-  "data_date": "2026-11-10",
-  "total_items": 138,
-  "suspicious_count": 4,
+  "updated_at": "2026-11-11T10:53:19.724705Z",
+  "data_date": "2026-11-11",
+  "total_items": 137,
+  "suspicious_count": 5,
   "font": "NikoshBAN",
   "divisions": [
     "খুলনা",
@@ -28,9 +28,27 @@
     },
     {
       "division": "খুলনা",
+      "name": "কমোরে মুরনে (দেশি)",
+      "min_price": "540.00",
+      "max_price": "550.00"
+    },
+    {
+      "division": "খুলনা",
+      "name": "কমোরে মুরনে (ব্রয়লার)",
+      "min_price": "170.00",
+      "max_price": "175.00"
+    },
+    {
+      "division": "খুলনা",
       "name": "কাতলা মাছ (দেশি)",
       "min_price": "150.00",
       "max_price": "180.00"
+    },
+    {
+      "division": "খুলনা",
+      "name": "খাসি মাংস",
+      "min_price": "1200.00",
+      "max_price": "1250.00"
     },
     {
       "division": "খুলনা",
@@ -52,13 +70,13 @@
     },
     {
       "division": "খুলনা",
-      "name": "চাল কারওয়ান মাঝারি (নী ধান",
+      "name": "চাল কারওয়ান মাঝারি (নি",
       "min_price": "52.00",
       "max_price": "54.00"
     },
     {
       "division": "খুলনা",
-      "name": "ডিম (হাঁস) ৪টি",
+      "name": "ডিম (সোের) ৪টি",
       "min_price": "25.00",
       "max_price": "35.00"
     },
@@ -76,21 +94,9 @@
     },
     {
       "division": "খুলনা",
-      "name": "মাংস গরু",
+      "name": "মাংস েরু",
       "min_price": "750.00",
       "max_price": "760.00"
-    },
-    {
-      "division": "খুলনা",
-      "name": "মুরগি (দেশি)",
-      "min_price": "540.00",
-      "max_price": "550.00"
-    },
-    {
-      "division": "খুলনা",
-      "name": "মুরগি (ব্রয়লার)",
-      "min_price": "170.00",
-      "max_price": "175.00"
     },
     {
       "division": "খুলনা",
@@ -100,7 +106,7 @@
     },
     {
       "division": "খুলনা",
-      "name": "সুগন্ধী (নী ধান৩৪ ইপ্রিনিযো নকদে)নি",
+      "name": "সুেন্ধী (নি িোি৩৪ ইপ্রিনিযো নকদে)নি",
       "min_price": "120.00",
       "max_price": "190.00"
     },
@@ -115,12 +121,6 @@
       "name": "স্থোিীয় িোনিরশোইি জাতের নর",
       "min_price": "82.00",
       "max_price": "88.00"
-    },
-    {
-      "division": "খুলনা",
-      "name": "েোনসর মাংস",
-      "min_price": "1200.00",
-      "max_price": "1250.00"
     },
     {
       "division": "চট্টগ্রাম",
@@ -209,8 +209,8 @@
     {
       "division": "চট্টগ্রাম",
       "name": "নডেঃ ফোে বসাদা",
-      "min_price": "10.00",
-      "max_price": "10.50"
+      "min_price": "10.25",
+      "max_price": "10.75"
     },
     {
       "division": "চট্টগ্রাম",
@@ -239,8 +239,8 @@
     {
       "division": "চট্টগ্রাম",
       "name": "েটি",
-      "min_price": "55.00",
-      "max_price": "60.00"
+      "min_price": "45.00",
+      "max_price": "50.00"
     },
     {
       "division": "চট্টগ্রাম",
@@ -263,8 +263,8 @@
     {
       "division": "ঢাকা",
       "name": "আদা (আমদানীকৃত)",
-      "min_price": "130.00",
-      "max_price": "170.00"
+      "min_price": "120.00",
+      "max_price": "160.00"
     },
     {
       "division": "ঢাকা",
@@ -336,7 +336,7 @@
       "division": "ঢাকা",
       "name": "ঢেঁড়স",
       "min_price": "60.00",
-      "max_price": "100.00"
+      "max_price": "80.00"
     },
     {
       "division": "ঢাকা",
@@ -408,7 +408,7 @@
       "division": "ঢাকা",
       "name": "মিষ্টি কুমড়া",
       "min_price": "30.00",
-      "max_price": "50.00"
+      "max_price": "40.00"
     },
     {
       "division": "ঢাকা",
@@ -426,7 +426,7 @@
       "division": "ঢাকা",
       "name": "মুলা",
       "min_price": "30.00",
-      "max_price": "60.00"
+      "max_price": "50.00"
     },
     {
       "division": "ঢাকা",
@@ -450,13 +450,13 @@
       "division": "ঢাকা",
       "name": "লাউ",
       "min_price": "30.00",
-      "max_price": "80.00"
+      "max_price": "70.00"
     },
     {
       "division": "ঢাকা",
       "name": "শসা",
       "min_price": "40.00",
-      "max_price": "70.00"
+      "max_price": "80.00"
     },
     {
       "division": "ঢাকা",
@@ -520,7 +520,7 @@
     },
     {
       "division": "বরিশাল",
-      "name": "চাল মাঝারি (পাটনা নি",
+      "name": "চাল মাঝারি (পাটনা নী ধান",
       "min_price": "60.00",
       "max_price": "65.00"
     },
@@ -580,15 +580,15 @@
     },
     {
       "division": "বরিশাল",
-      "name": "মুরগি (সোনালি ব্রয়লার)ব",
-      "min_price": "270.00",
-      "max_price": "300.00"
+      "name": "মুরগি (ব্রয়লার)",
+      "min_price": "160.00",
+      "max_price": "180.00"
     },
     {
       "division": "বরিশাল",
-      "name": "মুরগি (িডিমর)",
-      "min_price": "160.00",
-      "max_price": "180.00"
+      "name": "মুরগি (সোনালি ব্রয়লার)ব",
+      "min_price": "270.00",
+      "max_price": "300.00"
     },
     {
       "division": "ময়মনসিংহ",
@@ -607,12 +607,6 @@
       "name": "কারওয়ান মোটা (নি",
       "min_price": "52.00",
       "max_price": "56.00"
-    },
-    {
-      "division": "ময়মনসিংহ",
-      "name": "গরম মোরসর",
-      "min_price": "8.00",
-      "max_price": "10.00"
     },
     {
       "division": "ময়মনসিংহ",
@@ -707,8 +701,8 @@
     {
       "division": "রংপুর",
       "name": "মরিচ (কাঁচা)",
-      "min_price": "110.00",
-      "max_price": "115.00"
+      "min_price": "105.00",
+      "max_price": "110.00"
     },
     {
       "division": "রংপুর",
